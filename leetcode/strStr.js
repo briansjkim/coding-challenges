@@ -9,8 +9,11 @@ var strStr = (haystack, needle) => {
 
 // linear time complexity
 var strStr = (haystack, needle) => {
-  if (needle.length === 0|| needle.length > haystack.length) {
+  if (needle.length === 0) {
     return 0;
+  }
+  if (haystack.length < needle.length) {
+    return -1;
   }
 
   for (var i = 0; i < haystack.length; i++) {
@@ -24,3 +27,4 @@ var strStr = (haystack, needle) => {
 
 // console.log(strStr('hello', 'll')); // 2
 // console.log(strStr('aaaaaa', 'bba')); // -1
+// console.log(strStr('', 'a')); // -1
