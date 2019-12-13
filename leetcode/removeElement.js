@@ -3,26 +3,26 @@
 // order of elements can be changed. it doesn't matter what you leave beyond the new length
 
 // Quadratic time complexity solution
-// var removeElement = (nums, val) => {
-//   for (var i = 0; i < nums.length; i++) {
-//     while (nums.includes(val)) {
-//       nums.splice(nums.indexOf(val), 1);
-//     }
-//   }
-//   return nums.length;
-// }
+var removeElement = (nums, val) => {
+  for (var i = 0; i < nums.length; i++) {
+    while (nums.includes(val)) {
+      nums.splice(nums.indexOf(val), 1);
+    }
+  }
+  return nums.length;
+}
 
 // linear time complexity
-// var removeElement = (nums, val) => {
-//   var counter = 0;
+var removeElement = (nums, val) => {
+  var counter = 0;
 
-//   for (var i = 0; i < nums.length; i++) {
-//     if (nums[i] !== val) {
-//       counter++;
-//     }
-//   }
-//   return counter;
-// }
+  for (var i = 0; i < nums.length; i++) {
+    if (nums[i] !== val) {
+      counter++;
+    }
+  }
+  return counter;
+}
 
 // Solution for LC
 // this passes, but not the one above...
