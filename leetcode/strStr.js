@@ -3,9 +3,9 @@
 // edge case: what if needle is an empty string?
 
 // cheating
-// var strStr = (haystack, needle) => {
-//   return haystack.indexOf(needle);
-// }
+var strStr = (haystack, needle) => {
+  return haystack.indexOf(needle);
+}
 
 // linear time complexity
 var strStr = (haystack, needle) => {
