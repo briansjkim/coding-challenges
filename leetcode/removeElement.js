@@ -9,7 +9,7 @@ var removeElement = (nums, val) => {
       nums.splice(nums.indexOf(val), 1);
     }
   }
-  return nums;
+  return nums.length;
 }
 
 // console.log(removeElement([3, 2, 2, 3], 3));
