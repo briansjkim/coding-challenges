@@ -7,7 +7,7 @@
     // if there are no repeats
       // add the temp var to longest
 
-
+// Medium level
 
 var lengthOfLongestSubstring = (s) => {
   if (s.length <= 1) {
