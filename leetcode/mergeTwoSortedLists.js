@@ -1,4 +1,4 @@
-// merge two sorted lists and return it as a new list
+// merge two sorted arrays and return it as a new list
 
 var mergeTwoSortedLists = (arr1, arr2) => {
   var result = [];
