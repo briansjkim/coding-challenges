@@ -37,8 +37,8 @@ var intToRoman = (num) => {
   return result;
 }
 
-console.log(intToRoman(3)); //III
-console.log(intToRoman(4)); //IV
-console.log(intToRoman(9)); // IX
-console.log(intToRoman(58)); // LVIII
-console.log(intToRoman(1994)); // MCMXCIV
+// console.log(intToRoman(3)); //III
+// console.log(intToRoman(4)); //IV
+// console.log(intToRoman(9)); // IX
+// console.log(intToRoman(58)); // LVIII
+// console.log(intToRoman(1994)); // MCMXCIV
