@@ -15,16 +15,32 @@
     // assign the current number as the max between the current number and the current number plus the number before it
   // return the max number within the array
 
+// declarative solution
 var maxSubArray = (nums) => {
   if (nums.length === 0) {
     return 0;
   }
-
   for (var i = 1; i < nums.length; i++) {
     nums[i] = Math.max(nums[i], nums[i] + nums[i - 1]);
   }
   return Math.max(...nums);
 }
+
+// imperative solution
+var maxSubArray = (nums) => {
+  if (nums.length === 0) {
+    return 0;
+  }
+  var maxSum = Number.NEGATIVE_INFINITY;
+  var tempSum = 0;
+
+  for (var i = 0; i < nums.length; i++) {
+    tempSum = Math.max(nums[i], nums[i] + tempSum);
+    maxSum = Math.max(maxSum, tempSum);
+  }
+  return maxSum;
+}
+
 
 // console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4])); // 6
 // console.log(maxSubArray([])); //0
