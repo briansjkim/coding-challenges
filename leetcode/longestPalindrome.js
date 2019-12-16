@@ -8,6 +8,7 @@
 // c: n/a
 // e: if the length is 0, return an empty string
 
+// MEDIUM
 // quadratic time complexity
 
 // to make this constant, need to store previous palindrome?
