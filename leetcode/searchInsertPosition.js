@@ -2,6 +2,8 @@
 // return the index if the target is found
 // if not, return the index where it would be if it were inserted in order
 
+// linear time complexity at worst
+// at best, constant
 var searchInsert = (nums, target) => {
   if (nums[0] > target) {
     return 0;
