@@ -29,3 +29,4 @@ var maxSubArray = (nums) => {
 // console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4])); // 6
 // console.log(maxSubArray([])); //0
 // console.log(maxSubArray([1, 5, -2, -9, 1, 7, -4, -8, 3, 2])); //8
+// console.log(maxSubArray([1])); // 1
