@@ -11,3 +11,16 @@
  *
  * note: each term of the sequence of integers will be represented as a string
  */
+
+//i: an integer (n)
+//o: a sequence of integers (n - 1)
+//c: optimize
+//e: n will always be between 1 and 30
+
+// approach:
+
+var countAndSay = (n) => {
+  var result = '1';
+};
+
+// console.log(countAndSay(1)); // '1'
