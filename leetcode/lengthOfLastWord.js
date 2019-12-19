@@ -4,8 +4,6 @@
 // a word is defined as a character sequence consisting of non-space characters only
 
 var lengthOfLastWord = function(s) {
+  var result = s.trim().split(' ');
+  return result[result.length - 1].length;
 }
-
-console.log(lengthOfLastWord('a ')); // 1
-console.log(lengthOfLastWord('     Hello      World    ')); // 5
-console.log(lengthOfLastWord('Hello World')); // 5
