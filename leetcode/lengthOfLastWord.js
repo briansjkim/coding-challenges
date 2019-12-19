@@ -4,6 +4,8 @@
 // a word is defined as a character sequence consisting of non-space characters only
 
 var lengthOfLastWord = function(s) {
+  // trim removes whitespace from both the beginning and the end of a string
+  // use split to get the words separated by a space
   var result = s.trim().split(' ');
   return result[result.length - 1].length;
 }
