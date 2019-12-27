@@ -33,3 +33,30 @@ var hasPathSum = (root, sum) => {
 
   return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);
 }
+
+// another way to implement it
+var hasPathSum = (root, sum) => {
+  // track whether there's at least one path of values that equals the sum
+  var hasSum = false;
+
+  var traverse = (node, total) => {
+    if (!node) { return false; }
+    total += node.val;
+    if (!node.left && !node.right) {
+      if (total === sum) {
+        // if the total = sum
+          // set hasSum to true
+        // if it doesn't,
+          // don't do anything because we don't want to overwrite hasSum if there's at least one path of values that equals the sum
+        hasSum = true;
+        return;
+      }
+    } else {
+      traverse(node.left, total);
+      traverse(node.right, total);
+    }
+  }
+
+  traverse(root, 0);
+  return hasSum;
+}
