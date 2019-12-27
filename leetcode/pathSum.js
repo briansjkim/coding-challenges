@@ -20,3 +20,16 @@ var hasPathSum = (root, sum) => {
     // false will be returned
   return traverseLeft || traverseRight;
 }
+
+// to further shorten the code, I could do this:
+var hasPathSum = (root, sum) => {
+  if (!root) {
+    return false;
+  }
+
+  if (!root.left && !root.right ) {
+    return sum === root.val;
+  }
+
+  return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);
+}
