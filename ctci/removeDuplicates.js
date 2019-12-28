@@ -22,8 +22,28 @@ class LinkedList {
     }
     return this;
   }
+}
 
-  removeDuplicates() {
+// remove duplicates from an unsorted list
 
+var removeDuplicates = (list) => {
+  if (!list.head) {
+    return null;
   }
+
+  var p1 = list.head;
+  var p2 = p1.next;
+  var nodes = {};
+  nodes[p1.val] = true;
+
+  while (p2) {
+    if (!nodes[p2.val]) {
+      nodes[p2.val] = true;
+      p1 = p2;
+    } else {
+      p1.next = p2.next;
+    }
+    p2 = p2.next;
+  }
+  return list;
 }
