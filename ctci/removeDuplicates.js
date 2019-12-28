@@ -41,6 +41,7 @@ var removeDuplicates = (list) => {
       nodes[p2.val] = true;
       p1 = p2;
     } else {
+      // if the node is a duplicate, set p1.next to p2.next, but DON'T move p1 yet
       p1.next = p2.next;
     }
     p2 = p2.next;
