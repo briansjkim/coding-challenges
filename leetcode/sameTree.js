@@ -10,5 +10,16 @@
     // Output: False
 
 var isSameTree = function(p, q) {
+  // if they're both null, return true
+  if (p === null && q === null) { return true; }
 
+  // if only one of them are null, return false
+  if (p === null || q === null) { return false; }
+
+  // if the values don't match, return false
+  if (p.val !== q.val) { return false; }
+
+  // if they're the same tree, both will return true
+  // else, return false
+  return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
 }
