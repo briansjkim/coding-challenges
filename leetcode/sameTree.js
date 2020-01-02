@@ -19,6 +19,9 @@ var isSameTree = function(p, q) {
   // if the values don't match, return false
   if (p.val !== q.val) { return false; }
 
+  // returns false when there's a mismatch
+    // if there isn't a mismatch, keep traversing the tree on both sides until it reaches null
+
   // if they're the same tree, both will return true
   // else, return false
   return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
