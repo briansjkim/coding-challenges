@@ -43,6 +43,5 @@ var isSymmetric = root => {
     // then check the right side of a with the left side of b
     return isMirror(a.left, b.right) && isMirror(a.right, b.left);
   }
-
   return isMirror(root.left, root.right);
 };
