@@ -29,6 +29,7 @@ class LinkedList {
   }
 }
 
+// Solution with arrays (not recommended)
 var partitionList = (list, x) => {
   if (!list.head) {
     return null;
@@ -60,4 +61,45 @@ var partitionList = (list, x) => {
   }
   var partitionedList = left.concat(right);
   return partitionedList[0];
+};
+
+// Solution with pure linked lists (recommended)
+var partitionList = (list, x) => {
+  if (!list.head) {
+    return list.head;
+  }
+  // create two dummy linked lists
+  var dummyLow = new ListNode(null);
+  var dummyHigh = new ListNode(null);
+  // set 'less' to dummyLow to start at the head
+  // basically a pointer
+  var less = dummyLow;
+  // set 'high' to dummyHigh to start at the head
+  // basically a pointer
+  var high = dummyHigh;
+  var node = list.head;
+
+  while (node) {
+    if (node.val < x) {
+      // set the next node at less to the node
+      less.next = node;
+      // move the 'pointer' to the next node that was just added
+      less = less.next;
+    } else {
+      // set the next node at high to the node
+      high.next = node;
+      // move the 'pointer' to the next node that was just added
+      high = high.next;
+    }
+    node = node.next;
+  }
+  // less is now at the last node in less
+  // so make its next pointer point to the next node in dummyHigh
+  // not dummyHigh because the head is null (line 73)
+  less.next = dummyHigh.next;
+  // high is now at the last node in high
+  // so make its next pointer point to null
+  high.next = null;
+  // return the next node from dummyLow because the head is null (line 72)
+  return dummyLow.next;
 };
