@@ -17,4 +17,41 @@ function ListNode(val) {
   this.next = null;
 }
 
-var sumLists = (l1, l2) => {};
+var sumLists = (l1, l2) => {
+  if (!l1 && !l2) {
+    return null;
+  }
+  if (!l1) {
+    return l2;
+  }
+  if (!l2) {
+    return l1;
+  }
+
+  var dummyList = new ListNode(null);
+  var head = dummyList;
+  var sum = 0;
+  var carry = 0;
+
+  while (l1 || l2 || sum > 0) {
+    if (l1) {
+      sum += l1.val;
+      l1 = l1.next;
+    }
+    if (l2) {
+      sum += l2.val;
+      l2 = l2.next;
+    }
+    if (sum > 9) {
+      sum -= 10;
+      carry = 1;
+    }
+
+    dummyList.next = new ListNode(sum);
+    dummyList = dummyList.next;
+    sum = carry;
+    carry = 0;
+  }
+
+  return head.next;
+};
