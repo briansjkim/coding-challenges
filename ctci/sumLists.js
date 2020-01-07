@@ -12,4 +12,9 @@
 // Input: (6 -> 1 -> 7) + (2 -> 9 -> 5) => 617 + 295
 // Output: (9 -> 1 -> 2) => 912
 
+function ListNode(val) {
+  this.val = val;
+  this.next = null;
+}
+
 var sumLists = (l1, l2) => {};
