@@ -6,6 +6,24 @@ function ListNode(val) {
   this.next = null;
 }
 
+class LinkedList {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+  }
+
+  add(val) {
+    var newNode = new ListNode(val);
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      this.tail.next = newNode;
+      this.tail = newNode;
+    }
+  }
+}
+
 var partition = function(head, x) {
   if (!head) {
     return head;
@@ -47,3 +65,14 @@ var partition = function(head, x) {
   // because the head of dummyLow is null (line 14)
   return dummyLow.next;
 };
+
+var list = new LinkedList();
+list.add(3);
+list.add(5);
+list.add(8);
+list.add(5);
+list.add(10);
+list.add(2);
+list.add(1);
+
+partition(list.head, 5);
