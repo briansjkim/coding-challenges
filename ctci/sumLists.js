@@ -84,4 +84,6 @@ l2.add(5);
 l2.add(9);
 l2.add(2);
 
-sumLists(l1, l2);
+sumLists(l1.head, l2.head);
+sumLists(null, l2.head);
+sumLists(l1.head, null);
