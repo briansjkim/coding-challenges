@@ -40,3 +40,23 @@ var fib = n => {
 // console.log(fib(8)); // 21
 // console.log(fib(9)); // 34
 // console.log(fib(10)); // 54
+
+// recursive
+var fibRecursive = n => {
+  if (n <= 1) {
+    return n;
+  }
+
+  return fib(n - 1) + fib(n - 2);
+};
+
+// console.log(fibRecursive(0)); // 0
+// console.log(fibRecursive(2)); // 1
+// console.log(fibRecursive(3)); // 2
+// console.log(fibRecursive(4)); // 3
+// console.log(fibRecursive(5)); // 5
+// console.log(fibRecursive(6)); // 8
+// console.log(fibRecursive(7)); // 13
+// console.log(fibRecursive(8)); // 21
+// console.log(fibRecursive(9)); // 34
+// console.log(fibRecursive(10)); // 54
