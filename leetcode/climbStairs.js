@@ -36,3 +36,7 @@ var climbStairs = n => {
   }
   return steps[n];
 };
+
+// console.log(climbStairs(5)); // 8
+// console.log(climbStairs(6)); // 13
+// console.log(climbStairs(7)); // 21
