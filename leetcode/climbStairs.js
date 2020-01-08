@@ -18,6 +18,8 @@
 // 3. 2 steps + 1 step
 
 // basically, it's fibonacci
+
+// using memoization, very fast
 var climbStairs = n => {
   // create an array to store the number of steps per n
   var steps = [];
@@ -35,6 +37,18 @@ var climbStairs = n => {
     steps[i] = steps[i - 1] + steps[i - 2];
   }
   return steps[n];
+};
+
+// recursively, but VERY slow
+var climbStairs = n => {
+  if (n === 0) {
+    return 1;
+  }
+  if (n <= 3) {
+    return n;
+  }
+
+  return climbStairs(n - 1) + climbStairs(n - 2);
 };
 
 // console.log(climbStairs(5)); // 8
