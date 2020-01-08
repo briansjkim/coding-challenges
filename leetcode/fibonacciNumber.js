@@ -18,6 +18,7 @@
 // Output: 3
 // Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3
 
+// using memoization
 var fib = n => {
   var nums = [];
   nums[0] = 0;
@@ -28,3 +29,14 @@ var fib = n => {
   }
   return nums[n];
 };
+
+// console.log(fib(0)); // 0
+// console.log(fib(2)); // 1
+// console.log(fib(3)); // 2
+// console.log(fib(4)); // 3
+// console.log(fib(5)); // 5
+// console.log(fib(6)); // 8
+// console.log(fib(7)); // 13
+// console.log(fib(8)); // 21
+// console.log(fib(9)); // 34
+// console.log(fib(10)); // 54
