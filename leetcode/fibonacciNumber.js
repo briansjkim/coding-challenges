@@ -18,7 +18,7 @@
 // Output: 3
 // Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3
 
-// using memoization
+// using memoization, very fast
 var fib = n => {
   var nums = [];
   nums[0] = 0;
@@ -41,7 +41,7 @@ var fib = n => {
 // console.log(fib(9)); // 34
 // console.log(fib(10)); // 54
 
-// recursive
+// recursive, slower than memoization
 var fibRecursive = n => {
   if (n <= 1) {
     return n;
