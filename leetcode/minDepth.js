@@ -24,3 +24,13 @@ var minDepth = root => {
 
   return Math.min(minDepth(root.left), minDepth(root.right)) + 1;
 };
+
+var tree = new TreeNode(3);
+tree.left = new TreeNode(9);
+tree.right = new TreeNode(20);
+tree.left.left = null;
+tree.left.right = null;
+tree.right.left = new TreeNode(15);
+tree.right.right = new TreeNode(7);
+
+// console.log(minDepth(tree)); // 2
