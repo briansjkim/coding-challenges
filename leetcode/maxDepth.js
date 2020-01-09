@@ -29,6 +29,21 @@ var maxDepth = function(root) {
   // return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
 };
 
+// another way to solve it; may be more understandable
+var maxDepth = function(root) {
+  if (!root) {
+    return 0;
+  }
+  if (!root.left) {
+    return maxDepth(root.right) + 1;
+  }
+  if (!root.right) {
+    return maxDepth(root.left) + 1;
+  }
+
+  return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+};
+
 var tree = new TreeNode(3);
 tree.left = new TreeNode(9);
 tree.right = new TreeNode(20);
