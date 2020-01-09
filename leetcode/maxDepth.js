@@ -5,3 +5,10 @@
 // Example:
 // Given a binary tree [3, 9, 20, null, null, 15, 7]
 // its depth = 3 (3, 20, 15, 7)
+
+function TreeNode(val) {
+  this.val = val;
+  this.left = this.right = null;
+}
+
+var maxDepth = function(root) {};
