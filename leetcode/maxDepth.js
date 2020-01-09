@@ -11,4 +11,20 @@ function TreeNode(val) {
   this.left = this.right = null;
 }
 
-var maxDepth = function(root) {};
+// divide and conquer approach
+// start from the root
+// TRAVERSE LEFT
+// once it reaches node w/ null, it'll return 0 but then add 1 at the end
+// then it'll keep adding 1 until it reaches the root
+// TRAVERSE RIGHT
+// once it reaches node w/ null, it'll return 0 but then add 1 at the end
+// then it'll keep adding 1 until it reaches the root
+var maxDepth = function(root) {
+  if (!root) {
+    return 0;
+  }
+
+  return Math.max(maxDepth(root.left) + 1, maxDepth(root.right) + 1);
+  // could also just do
+  // return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+};
