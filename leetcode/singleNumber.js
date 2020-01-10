@@ -7,22 +7,23 @@
 // E: [2, 2, 1] => 1; [4, 1, 2, 1, 2] => 4
 
 // implemented using an object
-// var singleNumber = nums => {
-//   var storage = {};
-//   for (var i = 0; i < nums.length; i++) {
-//     if (storage[nums[i]]) {
-//       storage[nums[i]]++;
-//     } else {
-//       storage[nums[i]] = 1;
-//     }
-//   }
+// time complexity is linear, but space complexity is O(N) because it depends on the length of the array
+var singleNumber = nums => {
+  var storage = {};
+  for (var i = 0; i < nums.length; i++) {
+    if (storage[nums[i]]) {
+      storage[nums[i]]++;
+    } else {
+      storage[nums[i]] = 1;
+    }
+  }
 
-//   for (var key in storage) {
-//     if (storage[key] === 1) {
-//       return key;
-//     }
-//   }
-// };
+  for (var key in storage) {
+    if (storage[key] === 1) {
+      return key;
+    }
+  }
+};
 
 // w/o using extra memory
 // uses bit manipulation
@@ -34,6 +35,7 @@
 // a ^ a = 0
 
 // So if we use XOR on all bits together, we can find the unique number
+// linear time complexity and constant time complexity
 var singleNumber = nums => {
   // First example
   // a = 2, b = 2 => 0
@@ -47,6 +49,7 @@ var singleNumber = nums => {
 };
 
 // more understandable?
+// linear time complexity and constant time complexity
 var singleNumber = nums => {
   var a = 0;
   for (var i = 0; i < nums.length; i++) {
