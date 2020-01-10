@@ -46,5 +46,14 @@ var singleNumber = nums => {
   return nums.reduce((a, b) => a ^ b);
 };
 
+// more understandable?
+var singleNumber = nums => {
+  var a = 0;
+  for (var i = 0; i < nums.length; i++) {
+    a ^= nums[i];
+  }
+  return a;
+};
+
 // console.log(singleNumber([2, 2, 1]));
 // console.log(singleNumber([4, 1, 2, 1, 2]));
