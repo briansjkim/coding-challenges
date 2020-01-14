@@ -4,3 +4,7 @@
 
 // Example:
 // [-10, -3, 0, 5, 9] => [0, -3, 9, -10, null, 5]
+
+var sortedArrayToBST = function (nums) {
+
+}
