@@ -5,6 +5,11 @@
 // Example:
 // [-10, -3, 0, 5, 9] => [0, -3, 9, -10, null, 5]
 
+function TreeNode(val) {
+  this.val = val;
+  this.left = this.right = null;
+}
+
 var sortedArrayToBST = function (nums) {
 
 }
