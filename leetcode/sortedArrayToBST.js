@@ -11,5 +11,13 @@ function TreeNode(val) {
 }
 
 var sortedArrayToBST = function (nums) {
-
+  if (!nums.length) { return null; }
+  var mid = Math.floor(nums.length / 2);
+  var root = new TreeNode(nums[mid]);
+  // mid is going to be excluded when using slice
+  root.left = sortedArrayToBST(nums.slice(0, mid));
+  // since the value at mid is going to be a node
+  // don't include it when recursing
+  root.right = sortedArrayToBST(nums.slice(mid + 1));
+  return root;
 }
