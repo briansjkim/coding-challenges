@@ -21,3 +21,8 @@ var sortedArrayToBST = function (nums) {
   root.right = sortedArrayToBST(nums.slice(mid + 1));
   return root;
 }
+
+var nums = [-10, -3, 0, 5, 9];
+// console.log(sortedArrayToBST(nums));
+var moreNums = [-100, -38, 12, 36, 86];
+// console.log(sortedArrayToBST(moreNums));
