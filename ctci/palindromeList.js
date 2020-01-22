@@ -12,6 +12,15 @@ function ListNode(val) {
   this.next = null;
 }
 
-var palindromeList = function (list) {
+var reverse(node) {
+  var head = null;
 
+  while (!node) {
+    var newNode = new ListNode(node.val);
+    newNode.next = head;
+    head = newNode;
+    node = node.next;
+  }
+
+  return head;
 }
