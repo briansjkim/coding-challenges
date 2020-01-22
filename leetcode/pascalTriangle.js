@@ -9,5 +9,21 @@
 
 
 var generate = function (numRows) {
+  if (numRows === 0 || !numRows) { return []; }
 
+  const triangle = [];
+
+  for (var i = 0; i < numRows; i++) {
+    let currRow = [];
+    for (var j = 0; j <= i; j++) {
+      if (j === 0 || j === i) {
+        currRow.push(1);
+      } else {
+        currRow.push(triangle[i - 1][j - 1] + triangle[i - 1][j]);
+      }
+    }
+    triangle.push(currRow);
+  }
+
+  return triangle;
 }
