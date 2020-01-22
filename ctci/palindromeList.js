@@ -44,3 +44,11 @@ var isPalindrome = function (node) {
 
   return true;
 }
+
+var list = new ListNode(1);
+list.next = new ListNode(2);
+list.next.next = new ListNode(3);
+list.next.next.next = new ListNode(2);
+list.next.next.next.next = new ListNode(1);
+
+// console.log(isPalindrome(list));
