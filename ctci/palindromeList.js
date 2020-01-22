@@ -52,3 +52,11 @@ list.next.next.next = new ListNode(2);
 list.next.next.next.next = new ListNode(1);
 
 // console.log(isPalindrome(list));
+
+var wrongList = new ListNode(1);
+wrongList.next = new ListNode(2);
+wrongList.next.next = new ListNode(3);
+wrongList.next.next.next = new ListNode(4);
+wrongList.next.next.next.next = new ListNode(5);
+
+console.log(isPalindrome(wrongList));
