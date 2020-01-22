@@ -28,4 +28,19 @@ var reverse = function (node) {
   return head;
 }
 
+var isPalindrome = function (node) {
+  if (!node) { return null; }
+  var reversed = reverse(node);
+  var p1 = reversed;
+  var p2 = node;
 
+  while (p1 && p2) {
+    if (p1.val !== p2.val) {
+      return false;
+    }
+    p1 = p1.next;
+    p2 = p2.next;
+  }
+
+  return true;
+}
