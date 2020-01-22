@@ -12,15 +12,20 @@ function ListNode(val) {
   this.next = null;
 }
 
-var reverse(node) {
+var reverse = function (node) {
   var head = null;
 
-  while (!node) {
-    var newNode = new ListNode(node.val);
+  while (node) {
+    // create a new list node with the current node's val
+    let newNode = new ListNode(node.val);
+    // make the new list node's next pointer point to head (starting from the tail)
     newNode.next = head;
+    // assign head to the new list node (working our way backwards)
     head = newNode;
+    // assign the node to its next node
     node = node.next;
   }
-
   return head;
 }
+
+
