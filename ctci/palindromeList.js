@@ -59,4 +59,4 @@ wrongList.next.next = new ListNode(3);
 wrongList.next.next.next = new ListNode(4);
 wrongList.next.next.next.next = new ListNode(5);
 
-console.log(isPalindrome(wrongList));
+// console.log(isPalindrome(wrongList));
