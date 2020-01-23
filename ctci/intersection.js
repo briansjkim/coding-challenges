@@ -9,6 +9,11 @@
 // Input: L1: 1 -> 2 -> 3 -> 4 -> 5 & L2: 5 -> 4 -> 1 -> 3 -> 2
 // Output: Null
 
+function ListNode(val) {
+  this.val = val;
+  this.next = null;
+}
+
 var intersection = function (l1, l2) {
 
 }
