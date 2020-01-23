@@ -28,3 +28,5 @@ var maxProfit = function (prices) {
   return max;
 }
 
+// console.log(maxProfit([7, 1, 5, 3, 6, 4]));
+// console.log(maxProfit([7, 4, 3, 2, 1]));
