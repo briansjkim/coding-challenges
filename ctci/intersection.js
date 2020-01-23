@@ -15,5 +15,19 @@ function ListNode(val) {
 }
 
 var intersection = function (l1, l2) {
+  var storage = [];
 
+  while (l1) {
+    storage.push(l1);
+    l1 = l1.next;
+  }
+
+  while (l2) {
+    if (storage.includes(l2)) {
+      return l2;
+    }
+    l2 = l2.next;
+  }
+
+  return null;
 }
