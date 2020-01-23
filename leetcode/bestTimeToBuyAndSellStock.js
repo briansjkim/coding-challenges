@@ -13,7 +13,7 @@
 // Output: 0
 // Explanation: In this case, no transaction is done because the max profit is 0
 
-
+// Quadratic
 var maxProfit = function (prices) {
   var max = 0;
 
@@ -30,3 +30,16 @@ var maxProfit = function (prices) {
 
 // console.log(maxProfit([7, 1, 5, 3, 6, 4]));
 // console.log(maxProfit([7, 4, 3, 2, 1]));
+
+// Linear
+var maxProfit = function (prices) {
+  var min = Number.MAX_SAFE_INTEGER; // set min as the highest (and safest) number possible
+  var max = 0;
+
+  for (var i = 0; i < prices.length; i++) {
+    // prices[i] will represent the sell stock
+    min = Math.min(min, prices[i]); // min will represent the buy stock
+    max = Math.max(max, prices[i] - min); // max will represent the max profit
+  }
+  return max;
+}
