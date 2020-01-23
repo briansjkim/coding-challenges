@@ -15,5 +15,16 @@
 
 
 var maxProfit = function (prices) {
+  var max = 0;
 
+  for (var i = 0; i < prices.length; i++) {
+    let buy = prices[i];
+    for (var j = i + 1; j < prices.length; j++) {
+      let sell = prices[j];
+      let profit = sell - buy;
+      if (profit > max) { max = profit; }
+    }
+  }
+  return max;
 }
+
