@@ -21,3 +21,7 @@
 // I: head = [1, 3, 6, 2], pos = -1
 // O: false
 // Explanation: There isn't a cycle in the linked list
+
+const hasCycle = function (head) {
+
+}
