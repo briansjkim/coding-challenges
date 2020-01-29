@@ -7,5 +7,8 @@
 // O: true
 // Explanation: There is a cycle in the linked list, where tail connects to the second node (pos = 1)
 
-
+// Example 2:
+// I: head = [1, 2], pos = 0
+// O: true
+// Explanation: There is a cycle in the linked list, where tail connects to the first node (pos = 0)
 
