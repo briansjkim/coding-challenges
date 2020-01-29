@@ -5,27 +5,32 @@
 // Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).
 
 // Example 1:
-  // I: [7, 1, 5, 3, 6, 4]
-  // O: 7
-  // Explanation: Buy on day 2 (price = 1) and sell on day 3 (prices = 5), profit = 5 - 1 = 4
-    // Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6 -3 = 3
-    // Then 4 + 3 = 7
+// I: [7, 1, 5, 3, 6, 4]
+// O: 7
+// Explanation: Buy on day 2 (price = 1) and sell on day 3 (prices = 5), profit = 5 - 1 = 4
+// Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6 -3 = 3
+// Then 4 + 3 = 7
 
 // Example 2:
-  // I: [1, 2, 3, 4, 5]
-  // O: 4
-  // Explanation: Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5 - 1 = 4
-    // Can't buy on day 1, buy on day 2, and sell them later since that's engaging in multiple transactions at the same time. Must sell stock before buying again
+// I: [1, 2, 3, 4, 5]
+// O: 4
+// Explanation: Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5 - 1 = 4
+// Can't buy on day 1, buy on day 2, and sell them later since that's engaging in multiple transactions at the same time. Must sell stock before buying again
 
 // Example 3:
-  // I: [7, 6, 4, 3, 1]
-  // O: 0
-  // Explanation: In this case, no transaction is done because there's no max profit
+// I: [7, 6, 4, 3, 1]
+// O: 0
+// Explanation: In this case, no transaction is done because there's no max profit
 
 // Example 4:
-  // I: [1, 4, 2, 5, 9]
-  // O: 10
-  // Explanation: Buy on day 1 (price = 1) and sell on day 2 (price = 4), profit = 4 - 1 = 3
-    // Buy on day 3 (price = 2) and sell on day 4 (price = 5), profit = 5 - 2 = 3
-    // Buy on day 4 (price = 5) and sell on day 5 (price = 9), profit = 9 - 5 = 4
-    // Then 3 + 3 + 4 = 10
+// I: [1, 4, 2, 5, 9]
+// O: 10
+// Explanation: Buy on day 1 (price = 1) and sell on day 2 (price = 4), profit = 4 - 1 = 3
+// Buy on day 3 (price = 2) and sell on day 4 (price = 5), profit = 5 - 2 = 3
+// Buy on day 4 (price = 5) and sell on day 5 (price = 9), profit = 9 - 5 = 4
+// Then 3 + 3 + 4 = 10
+
+
+const maxProfit = function (prices) {
+
+}
