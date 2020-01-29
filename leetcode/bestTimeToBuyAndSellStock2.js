@@ -16,3 +16,8 @@
   // O: 4
   // Explanation: Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5 - 1 = 4
     // Can't buy on day 1, buy on day 2, and sell them later since that's engaging in multiple transactions at the same time. Must sell stock before buying again
+
+// Example 3:
+  // I: [7, 6, 4, 3, 1]
+  // O: 0
+  // Explanation: In this case, no transaction is done because there's no max profit
