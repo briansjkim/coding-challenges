@@ -24,7 +24,7 @@
 
 
 // Linear time and constant space
-const hasCycle = function (head) {
+var hasCycle = function (head) {
   if (!head) { return false; }
   var slow = head;
   var fast = head;
@@ -35,6 +35,23 @@ const hasCycle = function (head) {
 
     if (slow === fast) {
       return true;
+    }
+  }
+  return false;
+}
+
+// Linear time and linear space
+// space depends on the number of elements added to storage
+var hasCycle = function (head) {
+  if (!head) { return false; }
+  var storage = [];
+  var pointer = head;
+
+  while (pointer) {
+    if (storage.includes(pointer)) {
+      return true;
+    } else {
+      storage.push(pointer);
     }
   }
   return false;
