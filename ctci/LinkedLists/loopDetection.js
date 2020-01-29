@@ -4,7 +4,18 @@
 // I: A -> B -> C -> D -> E -> C (the same C as earlier)
 // O: C
 
+const loopDetection = function (head) {
+  if (!head) { return false; }
+  var fast = head;
+  var slow = head;
 
-const loopDetection = function (list) {
+  while (fast && fast.next) {
+    slow = slow.next;
+    fast = fast.next.next;
 
+    if (slow === fast) {
+      return fast;
+    }
+  }
+  return false;
 }
