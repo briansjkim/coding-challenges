@@ -30,7 +30,21 @@
 // Buy on day 4 (price = 5) and sell on day 5 (price = 9), profit = 9 - 5 = 4
 // Then 3 + 3 + 4 = 10
 
+// approach:
+// create a variable to hold the max profit - 'max'
+// iterate through the input 'prices'
+// check if the price at current index + 1 is greater than the price at the current index
+// if it is
+// add the difference to the max
+// return 'max'
 
 const maxProfit = function (prices) {
+  var max = 0;
 
+  for (var i = 0; i < prices.length; i++) {
+    if (prices[i + 1] > prices[i]) {
+      max += prices[i + 1] - prices[i];
+    }
+  }
+  return max;
 }
