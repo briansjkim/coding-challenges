@@ -12,3 +12,8 @@
 // O: true
 // Explanation: There is a cycle in the linked list, where tail connects to the first node (pos = 0)
 
+// Example 3:
+// I: head = [1], pos = -1
+// O: false
+// Explanation: There isn't a cycle in the linked list
+
