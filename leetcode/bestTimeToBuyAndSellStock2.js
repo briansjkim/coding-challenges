@@ -21,3 +21,11 @@
   // I: [7, 6, 4, 3, 1]
   // O: 0
   // Explanation: In this case, no transaction is done because there's no max profit
+
+// Example 4:
+  // I: [1, 4, 2, 5, 9]
+  // O: 10
+  // Explanation: Buy on day 1 (price = 1) and sell on day 2 (price = 4), profit = 4 - 1 = 3
+    // Buy on day 3 (price = 2) and sell on day 4 (price = 5), profit = 5 - 2 = 3
+    // Buy on day 4 (price = 5) and sell on day 5 (price = 9), profit = 9 - 5 = 4
+    // Then 3 + 3 + 4 = 10
