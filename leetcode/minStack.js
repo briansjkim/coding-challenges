@@ -20,3 +20,18 @@ var MinStack = function () {
   this.min = [];
 }
 
+MinStack.prototype.push(x) {
+
+}
+
+MinStack.prototype.pop() {
+
+}
+
+MinStack.prototype.top() {
+
+}
+
+MinStack.prototype.getMin() {
+
+}
