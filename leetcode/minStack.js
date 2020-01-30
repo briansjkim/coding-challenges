@@ -36,5 +36,7 @@ MinStack.prototype.top() {
 }
 
 MinStack.prototype.getMin() {
-
+  if (this.min.length > 0) {
+    return this.min[this.min.length - 1];
+  }
 }
