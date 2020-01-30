@@ -25,7 +25,8 @@ MinStack.prototype.push(x) {
 }
 
 MinStack.prototype.pop() {
-
+  this.storage.pop();
+  this.min.pop();
 }
 
 MinStack.prototype.top() {
