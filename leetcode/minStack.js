@@ -20,7 +20,7 @@ var MinStack = function () {
   this.min = [];
 }
 
-MinStack.prototype.push(x) {
+MinStack.prototype.push = function (x) {
   this.storage.push(x);
 
   var min = this.getMin();
@@ -32,19 +32,20 @@ MinStack.prototype.push(x) {
   }
 }
 
-MinStack.prototype.pop() {
+MinStack.prototype.pop = function () {
   this.storage.pop();
   this.min.pop();
 }
 
-MinStack.prototype.top() {
+MinStack.prototype.top = function () {
   if (this.storage.length > 0) {
     return this.storage[this.storage.length - 1];
   }
 }
 
-MinStack.prototype.getMin() {
+MinStack.prototype.getMin = function () {
   if (this.min.length > 0) {
     return this.min[this.min.length - 1];
   }
 }
+
