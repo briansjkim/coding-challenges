@@ -4,3 +4,13 @@
 // pop() -- Removes the element on top of the stack
 // top() -- Get the top element
 // getMin() -- Retrieve the minimum element in the stack
+
+// Example
+// var minStack = new MinStack();
+// minStack.push(-2);
+// minStack.push(0);
+// minStack.push(-3);
+// minStack.getMin(); // -3
+// minStack.pop();
+// minStack.top(); // 0
+// minStack.getMin(); // -2
