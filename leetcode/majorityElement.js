@@ -32,5 +32,20 @@
 // return the key
 
 var majorityElement = function (nums) {
+  var majority = Math.floor(nums.length / 2);
+  var storage = {};
 
+  for (var i = 0; i < nums.length; i++) {
+    if (storage[nums[i]]) {
+      storage[nums[i]]++;
+    } else {
+      storage[nums[i]] = 1;
+    }
+  }
+
+  for (var key in storage) {
+    if (storage[key] > majority) {
+      return key;
+    }
+  }
 }
