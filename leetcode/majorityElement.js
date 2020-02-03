@@ -50,5 +50,16 @@ var majorityElement = function (nums) {
   }
 }
 
+var majorityElement = function (nums) {
+  var storage = {};
+
+  for (var i = 0; i < nums.length; i++) {
+    storage[nums[i]] = storage[nums[i]] + 1 || 1;
+    if (storage[nums[i]] > Math.floor(nums.length / 2)) {
+      return nums[i];
+    }
+  }
+}
+
 majorityElement([3, 2, 3]); // 3
 majorityElement([2, 2, 1, 1, 1, 2, 2]); // 2
