@@ -32,3 +32,15 @@ class Stack {
     }
   }
 }
+
+var stack = new Stack();
+stack.push(-1);
+stack.push(0);
+stack.push(-3);
+stack.push(4);
+stack.getMin(); // -3
+stack.pop();
+stack.pop();
+stack.push(-5);
+stack.push(-3);
+stack.getMin(); // -5
