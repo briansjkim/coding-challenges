@@ -31,6 +31,7 @@
 // if its value is greater than majority
 // return the key
 
+// Linear time and linear space
 var majorityElement = function (nums) {
   var majority = Math.floor(nums.length / 2);
   var storage = {};
@@ -50,6 +51,7 @@ var majorityElement = function (nums) {
   }
 }
 
+// Linear time and linear space, but a bit faster than the first approach
 var majorityElement = function (nums) {
   var storage = {};
 
