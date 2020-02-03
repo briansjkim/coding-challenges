@@ -9,4 +9,8 @@ class Stack {
   push(val) {
     this.storage.push(val);
   }
+
+  pop() {
+    this.storage.pop();
+  }
 }
