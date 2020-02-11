@@ -20,7 +20,15 @@ The given node will not be the tail and it will always be a valid node of the li
 Do not return anything from your function.
 */
 
+function ListNode(val) {
+  this.val = val;
+  this.next = null;
+}
+
 function deleteNode(node) {
   node.val = node.next.val;
   node.next = node.next.next;
 }
+
+
+
