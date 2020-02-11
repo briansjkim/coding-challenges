@@ -30,5 +30,11 @@ function deleteNode(node) {
   node.next = node.next.next;
 }
 
+var newList = new ListNode(4);
+newList.next = new ListNode(5);
+newList.next.next = new ListNode(1);
+newList.next.next.next = new ListNode(9);
 
+deleteNode(newList.next);
+// console.log(newList);
 
