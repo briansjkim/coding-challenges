@@ -19,3 +19,7 @@ All of the nodes' values will be unique.
 The given node will not be the tail and it will always be a valid node of the linked list.
 Do not return anything from your function.
  */
+
+function deleteNode(node) {
+
+}
