@@ -36,5 +36,12 @@ newList.next.next = new ListNode(1);
 newList.next.next.next = new ListNode(9);
 
 deleteNode(newList.next);
-// console.log(newList);
+// console.log(newList); // 4 -> 1 -> 9
 
+var secondList = new ListNode(4);
+secondList.next = new ListNode(5);
+secondList.next.next = new ListNode(1);
+secondList.next.next.next = new ListNode(9);
+
+deleteNode(secondList.next.next);
+// console.log(secondList); // 4 -> 5 -> 9
