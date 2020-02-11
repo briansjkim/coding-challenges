@@ -45,3 +45,11 @@ secondList.next.next.next = new ListNode(9);
 
 deleteNode(secondList.next.next);
 // console.log(secondList); // 4 -> 5 -> 9
+
+var thirdList = new ListNode(9);
+thirdList.next = new ListNode(3);
+thirdList.next.next = new ListNode(2);
+thirdList.next.next.next = new ListNode(6);
+
+deleteNode(thirdList.next.next);
+// console.log(thirdList); // 9 -> 3 -> 6
