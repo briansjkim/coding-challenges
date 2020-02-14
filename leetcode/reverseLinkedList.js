@@ -9,6 +9,19 @@ Output: 5->4->3->2->1->NULL
 // Follow up:
 // A linked list can be reversed either iteratively or recursively. Could you implement both?
 
+// iterative solution
 var reverseList = function (head) {
+  if (!head) { return null; }
+  var current = head;
+  var prev = null;
+  var temp;
 
+  while (current) {
+    temp = current.next;
+    current.next = prev;
+    prev = current;
+    current = temp;
+  }
+
+  return prev;
 }
