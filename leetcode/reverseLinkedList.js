@@ -16,7 +16,7 @@ function ListNode(val) {
 
 // iterative solution
 var reverseList = function (head) {
-  if (!head) { return null; }
+  if (!head || !head.next) { return head; }
   var current = head;
   var prev = null;
   var temp;
