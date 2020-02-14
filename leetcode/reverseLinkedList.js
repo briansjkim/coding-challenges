@@ -47,5 +47,14 @@ list2.next.next.next.next = new ListNode(1);
 
 // recursive solution
 var reverseList = function (head) {
+  if (!head || !head.next) { return head; }
 
+  var reversedHead = reverseList(head.next);
+
+  var newLastEl = head.next;
+  if (newLastEl) { newLastEl.next = head; }
+
+  head.next = null;
+
+  return reversedHead;
 }
