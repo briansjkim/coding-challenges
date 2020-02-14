@@ -58,3 +58,10 @@ var reverseList = function (head) {
 
   return reversedHead;
 }
+
+var list3 = new ListNode(1);
+list3.next = new ListNode(2);
+list3.next.next = new ListNode(3);
+list3.next.next.next = new ListNode(4);
+list3.next.next.next.next = new ListNode(5);
+// console.log(reverseList(list3));
