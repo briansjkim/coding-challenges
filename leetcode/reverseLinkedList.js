@@ -38,3 +38,9 @@ list.next.next.next = new ListNode(4);
 list.next.next.next.next = new ListNode(5);
 // console.log(reverseList(list));
 
+var list2 = new ListNode(5);
+list2.next = new ListNode(4);
+list2.next.next = new ListNode(3);
+list2.next.next.next = new ListNode(2);
+list2.next.next.next.next = new ListNode(1);
+// console.log(reverseList(list2));
