@@ -65,3 +65,10 @@ list3.next.next = new ListNode(3);
 list3.next.next.next = new ListNode(4);
 list3.next.next.next.next = new ListNode(5);
 // console.log(reverseList(list3));
+
+var list4 = new ListNode(5);
+list4.next = new ListNode(4);
+list4.next.next = new ListNode(3);
+list4.next.next.next = new ListNode(2);
+list4.next.next.next.next = new ListNode(1);
+// console.log(reverseList(list4));
