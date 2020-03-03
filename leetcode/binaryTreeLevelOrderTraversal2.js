@@ -15,5 +15,23 @@ function TreeNode(val) {
 
 
 var levelOrderBottom = function (root) {
+  if (!root) { return []; }
 
+  var result = [];
+
+  var traverse = function (node, depth) {
+    if (!node) { return; }
+
+    if (!result[depth]) {
+      result[depth] = [];
+    }
+
+    result[depth].push(node.val);
+
+    traverse(node.left, depth + 1);
+    traverse(node.right, depth + 1);
+  }
+
+  traverse(root, 0);
+  return result;
 }
