@@ -42,7 +42,7 @@ root.right = new TreeNode(20);
 root.right.left = new TreeNode(15);
 root.right.right = new TreeNode(7);
 
-console.log(levelOrderBottom(root));
+// console.log(levelOrderBottom(root));
 
 var root2 = new TreeNode(3);
 root2.left = new TreeNode(9);
@@ -52,4 +52,4 @@ root2.left.right = new TreeNode(13);
 root2.right.left = new TreeNode(15);
 root2.right.right = new TreeNode(7);
 
-console.log(levelOrderBottom(root2));
+// console.log(levelOrderBottom(root2));
