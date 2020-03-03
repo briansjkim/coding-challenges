@@ -8,6 +8,12 @@
 // Input: Tree: [3, 9, 20, 7, 13, 15, 7]
 // Output: [ [7, 13], [15, 7], [9, 20], [3] ]
 
+function TreeNode(val) {
+  this.val = val;
+  this.left = this.right = null;
+}
+
+
 var levelOrderBottom = function (root) {
 
 }
