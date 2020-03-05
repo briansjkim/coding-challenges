@@ -13,15 +13,15 @@ var romanToInt = (string) => {
     'M': 1000
   }
 
-  var romanNum = 0;
+  var romanInt = 0;
   for (var i = 0; i < string.length; i++) {
     if (romans[string[i]] < romans[string[i + 1]]) {
-      romanNum -= romans[string[i]];
+      romanInt -= romans[string[i]];
     } else {
-      romanNum += romans[string[i]];
+      romanInt += romans[string[i]];
     }
   }
-  return romanNum;
+  return romanInt;
 }
 
 // console.log(romanToInt('I')); // 1
