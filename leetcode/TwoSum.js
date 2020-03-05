@@ -21,7 +21,17 @@ var twoSum = function (nums, target) {
 }
 // time complexity: quadratic
 
-
+// linear
 var twoSum = function (nums, target) {
+  var storage = {};
+
+  for (var i = 0; i < nums.length; i++) {
+    var diff = target - nums[i];
+    // hasOwnProperty method is constant because it's a key lookup
+    if (storage.hasOwnProperty(diff)) {
+      return [storage[diff], i];
+    }
+    storage[nums[i]] = i;
+  }
 
 }
