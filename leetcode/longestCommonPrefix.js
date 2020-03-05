@@ -16,7 +16,21 @@ var longestCommonPrefix = (array) => {
   return prefix;
 }
 
-// console.log(longestCommonPrefix(['flower', 'flow', 'flight'])); //fl
-// console.log(longestCommonPrefix(['dog', 'deal', 'car'])); // ''
-// console.log(longestCommonPrefix(['broke', 'broker', 'broken'])); // broke
-// console.log(longestCommonPrefix(['internet', 'interneter', 'interneting'])); // internet
+
+var longestCommonPrefix = function (strs) {
+  if (strs.length === 0) { return ''; }
+  var prefix = '';
+
+  for (var i = 0; i < strs[0].length; i++) {
+    for (var j = 1; j < strs.length; j++) {
+      if (strs[0][i] !== strs[j][i]) { return prefix; }
+    }
+    prefix += strs[0][i];
+  }
+  return prefix;
+}
+
+console.log(longestCommonPrefix(['flower', 'flow', 'flight'])); //fl
+console.log(longestCommonPrefix(['dog', 'deal', 'car'])); // ''
+console.log(longestCommonPrefix(['broke', 'broker', 'broken'])); // broke
+console.log(longestCommonPrefix(['internet', 'interneter', 'interneting'])); // internet
