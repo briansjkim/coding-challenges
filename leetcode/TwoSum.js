@@ -20,3 +20,8 @@ var twoSum = function (nums, target) {
   }
 }
 // time complexity: quadratic
+
+
+var twoSum = function (nums, target) {
+
+}
