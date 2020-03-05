@@ -8,18 +8,8 @@
 
 // each input would have EXACTLY one solution, so no edge case for if there isn't a solution
 
-// approach:
-  // create a function twoSum that takes an array and a target number
-  // create a result array variable
-    // set it to [0, 0]
-  // iterate through the input array and start at index 0
-    // iterate through the input array again but start at the next index
-      // if the 1st iteration's element and the 2nd iteration's element sum equals the target
-        // set result as the 1st iteration's index and the 2nd iteration's index ( [i, j] )
-        // return the result
-
-var twoSum = function(nums, target) {
-  var result = [0, 0];
+var twoSum = function (nums, target) {
+  var result;
   for (var i = 0; i < nums.length; i++) {
     for (var j = i + 1; j < nums.length; j++) {
       if (nums[i] + nums[j] === target) {
