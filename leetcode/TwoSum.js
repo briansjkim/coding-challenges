@@ -5,6 +5,7 @@
 // i: nums = [2, 7, 11, 15], target = 9
 // o: [0, 1] because nums[0] + nums[1] = target
 
+// quadratic
 function twoSum(nums, target) {
   for (var i = 0; i < nums.length; i++) {
     for (var j = i + 1; j < nums.length; j++) {
@@ -15,4 +16,16 @@ function twoSum(nums, target) {
   }
 }
 
+// linear
+function twoSum(nums, target) {
+  var storage = {};
+
+  for (var i = 0; i < nums.length; i++) {
+    let diff = target - nums[i];
+    if (storage.hasOwnProperty(diff)) {
+      return [storage[diff], i];
+    }
+    storage[nums[i]] = i;
+  }
+}
 
