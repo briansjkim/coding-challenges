@@ -14,6 +14,7 @@
 // 6^2 + 9^2 = 100
 // 1^2 + 0^2 + 0^2 = 1
 
+// 100ms
 var isHappy = function (n, visited = []) {
   var sum = 0;
   var chars = String(n);
@@ -31,6 +32,8 @@ var isHappy = function (n, visited = []) {
     return isHappy(sum, visited);
   }
 }
+
+
 
 // console.log(isHappy(19));
 // console.log(isHappy(2));
