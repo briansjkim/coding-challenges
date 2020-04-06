@@ -33,7 +33,21 @@ var isHappy = function (n, visited = []) {
   }
 }
 
+// 56ms
+var isHappy = function (n, visited = []) {
+  var chars = String(n).split('');
 
+  const sum = chars.reduce((arr, curr) => arr + Math.pow(curr, 2), 0);
 
-// console.log(isHappy(19));
-// console.log(isHappy(2));
+  if (sum === 1) { return true; }
+
+  if (visited[sum]) {
+    return false;
+  } else {
+    visited[sum] = true;
+    return isHappy(sum, visited);
+  }
+}
+
+console.log(isHappy(19));
+console.log(isHappy(2));
