@@ -8,22 +8,19 @@
 
 // implemented using an object
 // time complexity is linear, but space complexity is O(N) because it depends on the length of the array
-var singleNumber = nums => {
+var singleNumber = function (nums) {
   var storage = {};
+
   for (var i = 0; i < nums.length; i++) {
     if (storage[nums[i]]) {
-      storage[nums[i]]++;
+      delete storage[nums[i]];
     } else {
       storage[nums[i]] = 1;
     }
   }
 
-  for (var key in storage) {
-    if (storage[key] === 1) {
-      return key;
-    }
-  }
-};
+  return Object.keys(storage)[0];
+}
 
 // w/o using extra memory
 // uses bit manipulation
