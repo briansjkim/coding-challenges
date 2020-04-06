@@ -20,7 +20,9 @@ var isHappy = function (n, visited = []) {
   var chars = String(n);
 
   for (var i = 0; i < chars.length; i++) {
-    sum += Math.pow(Number(chars[i]), 2);
+    // don't need to turn string characters into numbers because Math.pow does it
+    // sum += Math.pow(Number(chars[i]), 2);
+    sum += Math.pow(chars[i], 2);
   }
 
   if (sum === 1) { return true; }
