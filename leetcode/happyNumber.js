@@ -15,5 +15,18 @@
 // 1^2 + 0^2 + 0^2 = 1
 
 var isHappy = function (n) {
+  var strNum = String(n);
+  var sum = 0;
 
+  for (var i = 0; i < strNum.length; i++) {
+    sum += Math.pow(Number(strNum[i]), 2);
+  }
+
+  if (sum === 1) {
+    return true;
+  } else {
+    isHappy(sum);
+  }
 }
+
+console.log(isHappy(19));
