@@ -14,18 +14,17 @@
 // 6^2 + 9^2 = 100
 // 1^2 + 0^2 + 0^2 = 1
 
-// 100ms
 var isHappy = function (n, visited = []) {
   var sum = 0;
   var chars = String(n);
 
   for (var i = 0; i < chars.length; i++) {
-    // don't need to turn string characters into numbers because Math.pow does it
-    // sum += Math.pow(Number(chars[i]), 2);
     sum += Math.pow(chars[i], 2);
   }
 
-  if (sum === 1) { return true; }
+  if (sum === 1) {
+    return true;
+  }
 
   if (visited[sum]) {
     return false;
@@ -33,22 +32,7 @@ var isHappy = function (n, visited = []) {
     visited[sum] = true;
     return isHappy(sum, visited);
   }
-}
 
-// 56ms
-var isHappy = function (n, visited = []) {
-  var chars = String(n).split('');
-
-  const sum = chars.reduce((arr, curr) => arr + Math.pow(curr, 2), 0);
-
-  if (sum === 1) { return true; }
-
-  if (visited[sum]) {
-    return false;
-  } else {
-    visited[sum] = true;
-    return isHappy(sum, visited);
-  }
 }
 
 console.log(isHappy(19));
