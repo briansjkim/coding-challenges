@@ -18,6 +18,7 @@
 // switch the number at the current index to 0
 // increment idx
 
+// 60ms
 var moveZeroes = function (nums) {
   var idx = 0;
 
@@ -27,6 +28,18 @@ var moveZeroes = function (nums) {
       if (i !== idx) {
         nums[i] = 0;
       }
+      idx++;
+    }
+  }
+}
+
+var moveZeroes = function (nums) {
+  var idx = 0;
+
+  for (var i = 0; i < nums.length; i++) {
+    if (nums[i] !== 0) {
+      nums[idx] = nums[i];
+      nums[i] = idx === i ? nums[i] : 0;
       idx++;
     }
   }
