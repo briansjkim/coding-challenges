@@ -33,6 +33,7 @@ var moveZeroes = function (nums) {
   }
 }
 
+// 56ms
 var moveZeroes = function (nums) {
   var idx = 0;
 
