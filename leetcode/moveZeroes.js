@@ -19,4 +19,15 @@
 // increment idx
 
 var moveZeroes = function (nums) {
+  var idx = 0;
+
+  for (var i = 0; i < nums.length; i++) {
+    if (nums[i] !== 0) {
+      nums[idx] = nums[i];
+      if (i !== idx) {
+        nums[i] = 0;
+      }
+      idx++;
+    }
+  }
 }
