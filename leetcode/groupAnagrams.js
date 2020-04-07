@@ -8,3 +8,7 @@
 // o: array of arrays
 // c:
 // e: all inputs will be lowercase. order of output doesn't matter
+
+var groupAnagrams = function (strs) {
+
+}
