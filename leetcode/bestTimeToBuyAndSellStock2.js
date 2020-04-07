@@ -38,6 +38,7 @@
 // add the difference to the max
 // return 'max'
 
+// 56ms
 var maxProfit = function (prices) {
   var profit = 0;
 
