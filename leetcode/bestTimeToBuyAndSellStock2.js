@@ -38,15 +38,16 @@
 // add the difference to the max
 // return 'max'
 
-const maxProfit = function (prices) {
-  var max = 0;
+var maxProfit = function (prices) {
+  var profit = 0;
 
   for (var i = 0; i < prices.length; i++) {
     if (prices[i + 1] > prices[i]) {
-      max += prices[i + 1] - prices[i];
+      profit += prices[i + 1] - prices[i];
     }
   }
-  return max;
+
+  return profit;
 }
 
 // console.log(maxProfit([7, 1, 5, 3, 6, 4])); // 7
