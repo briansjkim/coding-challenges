@@ -32,6 +32,7 @@ var maxSubArray = function (nums) {
   return maxSum;
 }
 
+// 64ms
 var maxSubArray = function (nums) {
   if (nums.length === 0) {
     return 0;
