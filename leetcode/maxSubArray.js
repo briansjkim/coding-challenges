@@ -15,7 +15,7 @@
 // assign the current number as the max between the current number and the current number plus the number before it
 // return the max number within the array
 
-
+// 48ms
 var maxSubArray = function (nums) {
   if (nums.length === 0) {
     return 0;
