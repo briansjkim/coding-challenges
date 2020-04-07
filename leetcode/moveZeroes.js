@@ -7,14 +7,16 @@
 // E: Must do this in-place without making a copy of the array
 // Minimize the total number of operations
 
+// approach:
+// create a variable to be the first, slow pointer (idx)
+// iterate through the input nums
+// if the number isn't 0
+// assign the number to nums[idx]
+// if the current index is the same as idx
+// keep the number as it is
+// if it isn't the same,
+// switch the number at the current index to 0
+// increment idx
 
 var moveZeroes = function (nums) {
-  var idx = 0;
-
-  for (var i = 0; i < nums.length; i++) {
-    if (nums[i] !== 0) {
-      nums[idx] = nums[i];
-      idx++;
-    }
-  }
 }
