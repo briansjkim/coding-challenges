@@ -5,4 +5,9 @@
 // O: [1, 3, 12, 0, 0]
 // C:
 // E: Must do this in-place without making a copy of the array
-      // Minimize the total number of operations
+// Minimize the total number of operations
+
+
+var moveZeroes = function (nums) {
+
+}
