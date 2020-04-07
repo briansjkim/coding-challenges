@@ -32,6 +32,19 @@ var maxSubArray = function (nums) {
   return maxSum;
 }
 
+var maxSubArray = function (nums) {
+  if (nums.length === 0) {
+    return 0;
+  }
+
+  // start at i = 1 in order to add the current and prev number
+  for (var i = 1; i < nums.length; i++) {
+    nums[i] = Math.max(nums[i], nums[i] + nums[i - 1]);
+  }
+
+  return Math.max(...nums);
+}
+
 
 // console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4])); // 6
 // console.log(maxSubArray([])); //0
