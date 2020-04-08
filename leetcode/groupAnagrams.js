@@ -25,6 +25,7 @@ var groupAnagrams = function (strs) {
 }
 
 // easier readability
+// 148ms
 var groupAnagrams = function (strs) {
   var map = {};
 
