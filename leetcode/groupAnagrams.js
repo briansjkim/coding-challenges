@@ -29,7 +29,7 @@ var groupAnagrams = function (strs) {
   var map = {};
 
   for (let str of strs) {
-    let sortedStr = str.sort();
+    let sortedStr = str.split('').sort();
 
     if (!map[sortedStr]) {
       map[sortedStr] = [str];
@@ -44,7 +44,7 @@ var groupAnagrams = function (strs) {
   var map = {};
 
   for (let str of strs) {
-    let sortedStr = str.sort().join('');
+    let sortedStr = str.split('').sort().join('');
 
     if (!map[sortedStr]) {
       map[sortedStr] = [str];
