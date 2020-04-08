@@ -45,3 +45,24 @@ var countElements = function (arr) {
   }
   return count;
 }
+
+var countElements = function (arr) {
+  var hash = {};
+  var count = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (hash[arr[i]]) {
+      hash[arr[i]]++;
+    } else {
+      hash[arr[i]] = 1;
+    }
+  }
+
+  for (var j = 0; j < arr.length; j++) {
+    let sum = arr[j] + 1;
+    if (hash[sum]) {
+      count++;
+    }
+  }
+  return count;
+}
