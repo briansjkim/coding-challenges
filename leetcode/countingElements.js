@@ -13,3 +13,7 @@
 // I: arr = [1, 1, 3, 3, 5, 5, 7, 7]
 // O: 0
 // Explanation: No numbers are counted because there's no 2, 4, 6, 8 in arr
+
+// Example 3:
+// I: arr = [1, 3, 2, 3, 5, 0];
+// O: 0, 1, 2 are counted because 1, 2, 3 are in arr
