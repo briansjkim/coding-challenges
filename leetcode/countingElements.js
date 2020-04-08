@@ -16,4 +16,6 @@
 
 // Example 3:
 // I: arr = [1, 3, 2, 3, 5, 0];
-// O: 0, 1, 2 are counted because 1, 2, 3 are in arr
+// O: 3
+// Explanation: 0, 1, 2 are counted because 1, 2, 3 are in arr
+
