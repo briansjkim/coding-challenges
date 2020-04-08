@@ -10,5 +10,16 @@
 // e: all inputs will be lowercase. order of output doesn't matter
 
 var groupAnagrams = function (strs) {
+  var map = {};
 
+  for (let str of strs) {
+    let key = [...str].sort();
+
+    if (!map[key]) {
+      map[key] = [str];
+    } else {
+      map[key].push(str);
+    }
+  }
+  return Object.values(map);
 }
