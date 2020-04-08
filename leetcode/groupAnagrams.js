@@ -9,6 +9,8 @@
 // c:
 // e: all inputs will be lowercase. order of output doesn't matter
 
+
+// 152ms
 var groupAnagrams = function (strs) {
   var map = {};
 
