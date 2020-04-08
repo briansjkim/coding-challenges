@@ -23,3 +23,8 @@
 // I: arr = [1, 1, 2, 2]
 // O: 2
 // Explanation: two 1's are counted because 2 is in arr
+
+// I: array of integers
+// O: integer
+// C: 1 <= arr.length <= 1000; 0 <= arr[i] <= 1000
+
