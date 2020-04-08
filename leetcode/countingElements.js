@@ -29,5 +29,18 @@
 // C: 1 <= arr.length <= 1000; 0 <= arr[i] <= 1000
 
 var countElements = function (arr) {
+  var hash = {};
+  var count = 0;
 
+  for (var i = 0; i < arr.length; i++) {
+    hash[arr[i]] = hash[arr[i]]++ || hash[arr[i]] = 1;
+  }
+
+  for (var j = 0; j < arr.length; j++) {
+    let sum = arr[j] + 1;
+    if (hash[sum]) {
+      count++;
+    }
+  }
+  return count;
 }
