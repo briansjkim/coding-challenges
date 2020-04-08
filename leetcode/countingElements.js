@@ -28,6 +28,7 @@
 // O: integer
 // C: 1 <= arr.length <= 1000; 0 <= arr[i] <= 1000
 
+// 56ms
 var countElements = function (arr) {
   var hash = {};
   var count = 0;
