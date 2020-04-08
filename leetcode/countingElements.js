@@ -19,3 +19,7 @@
 // O: 3
 // Explanation: 0, 1, 2 are counted because 1, 2, 3 are in arr
 
+// Example 4:
+// I: arr = [1, 1, 2, 2]
+// O: 2
+// Explanation: two 1's are counted because 2 is in arr
