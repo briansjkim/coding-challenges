@@ -23,3 +23,19 @@ var groupAnagrams = function (strs) {
   }
   return Object.values(map);
 }
+
+// easier readability
+var groupAnagrams = function (strs) {
+  var map = {};
+
+  for (let str of strs) {
+    let sortedStr = str.sort();
+
+    if (!map[sortedStr]) {
+      map[sortedStr] = [str];
+    } else {
+      map[sortedStr].push(str);
+    }
+  }
+  return Object.values(map);
+}
