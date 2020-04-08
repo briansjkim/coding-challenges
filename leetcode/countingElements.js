@@ -46,6 +46,7 @@ var countElements = function (arr) {
   return count;
 }
 
+// 48ms
 var countElements = function (arr) {
   var hash = {};
   var count = 0;
