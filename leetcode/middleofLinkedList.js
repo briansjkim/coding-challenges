@@ -14,3 +14,8 @@
 // O: middle node
 // C:
 // E: the number of nodes in the given list will be between 1 and 100
+
+function ListNode(val) {
+  this.val = val;
+  this.next = null;
+}
