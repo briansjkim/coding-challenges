@@ -5,3 +5,8 @@
 // I: S = "ab#c", T = "ad#c"
 // O: true
 // Explanation: Both S and T become "ac"
+
+// Example 2:
+// I: S = "ab##", T = "c#d#"
+// O: true
+// Explanation: Both become ""
