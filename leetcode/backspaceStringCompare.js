@@ -40,5 +40,5 @@ var traverse = function (string) {
 }
 
 var backspaceCompare = function (S, T) {
-
+  return traverse(S) === traverse(T);
 }
