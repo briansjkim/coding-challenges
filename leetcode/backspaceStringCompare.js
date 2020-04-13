@@ -16,3 +16,7 @@
 // O: true
 // Explanation: Both become "c"
 
+// Example 4:
+// I: S = "a#c", T = "b"
+// O: false
+// Explanation: S becomes "c" while T stays "b"
