@@ -20,8 +20,16 @@ function ListNode(val) {
   this.next = null;
 }
 
-var middleNode = function (head) {
 
+var middleNode = function (head) {
+  let fast = head;
+  let slow = head;
+
+  while (fast && fast.next) {
+    fast = fast.next.next;
+    slow = slow.next;
+  }
+  return slow;
 }
 
 var list = new ListNode(1);
