@@ -26,6 +26,10 @@
 // C: Time complexity: O(N) and space complexity: O(1)
 // E: 1 <= S.length <= 200; 1 <= T.length <= 200; S and T only contain lowercase letters and '#' characters
 
+var traverse = function (string) {
+
+}
+
 var backspaceCompare = function (S, T) {
 
 }
