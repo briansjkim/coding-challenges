@@ -20,3 +20,8 @@
 // I: S = "a#c", T = "b"
 // O: false
 // Explanation: S becomes "c" while T stays "b"
+
+// I: two strings
+// O: boolean
+// C: Time complexity: O(N) and space complexity: O(1)
+// E: 1 <= S.length <= 200; 1 <= T.length <= 200; S and T only contain lowercase letters and '#' characters
