@@ -27,7 +27,16 @@
 // E: 1 <= S.length <= 200; 1 <= T.length <= 200; S and T only contain lowercase letters and '#' characters
 
 var traverse = function (string) {
+  let storage = [];
 
+  for (let char of string.split('')) {
+    if (char === '#') {
+      storage.pop();
+    } else {
+      storage.push(char);
+    }
+  }
+  return storage.join('');
 }
 
 var backspaceCompare = function (S, T) {
