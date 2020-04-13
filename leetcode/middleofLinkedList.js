@@ -4,3 +4,8 @@
 // Example 1:
 // I: [1, 2, 3, 4, 5]
 // O: Node 3 from this list (Serialization: [3, 4, 5])
+
+// Example 2:
+// I: [1, 2, 3, 4, 5, 6]
+// O: Node 4 from this list (Serialization: [4, 5, 6])
+// Explanation: Since the list has two middle nodes with values 3 and 4, we return the second one
