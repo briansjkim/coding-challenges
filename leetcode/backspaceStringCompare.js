@@ -10,3 +10,9 @@
 // I: S = "ab##", T = "c#d#"
 // O: true
 // Explanation: Both become ""
+
+// Example 3:
+// I: S = "a##c", T = "#a#c"
+// O: true
+// Explanation: Both become "c"
+
