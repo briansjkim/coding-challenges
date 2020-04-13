@@ -23,6 +23,7 @@ function ListNode(val) {
 // we want to use two pointers
 // move fast two nodes while moving slow one node in order to get to the end of the list and get the middle node
 
+//56ms
 var middleNode = function (head) {
   let fast = head;
   let slow = head;
