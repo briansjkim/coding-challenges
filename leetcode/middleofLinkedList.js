@@ -38,6 +38,18 @@ var middleNode = function (head) {
   return slow;
 }
 
+// slightly faster
+var middleNode = function (head) {
+  let fast = slow = head;
+
+  while (fast && fast.next) {
+    fast = fast.next.next;
+    slow = slow.next;
+  }
+
+  return slow;
+}
+
 var list = new ListNode(1);
 list.next = new ListNode(2);
 list.next.next = new ListNode(3);
