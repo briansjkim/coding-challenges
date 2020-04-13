@@ -26,15 +26,16 @@
 // C: Time complexity: O(N) and space complexity: O(1)
 // E: 1 <= S.length <= 200; 1 <= T.length <= 200; S and T only contain lowercase letters and '#' characters
 
-var traverse = function (string) {
-  let storage = [];
+// same implementation with same runtime. just practice w/ ternary operator
+// var traverse = function (string) {
+//   let storage = [];
 
-  for (let char of string.split('')) {
-    char === '#' ? storage.pop() : storage.push(char);
-  }
+//   for (let char of string.split('')) {
+//     char === '#' ? storage.pop() : storage.push(char);
+//   }
 
-  return storage.join('');
-}
+//   return storage.join('');
+// }
 
 // create helper function to do the operation because it's the same operation for both strings
 var traverse = function (string) {
