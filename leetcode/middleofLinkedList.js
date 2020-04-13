@@ -10,7 +10,7 @@
 // O: Node 4 from this list (Serialization: [4, 5, 6])
 // Explanation: Since the list has two middle nodes with values 3 and 4, we return the second one
 
-// I: singly linked list
+// I: singly linked list (Head)
 // O: middle node
 // C:
 // E: the number of nodes in the given list will be between 1 and 100
@@ -18,4 +18,8 @@
 function ListNode(val) {
   this.val = val;
   this.next = null;
+}
+
+var middleNode = function (head) {
+
 }
