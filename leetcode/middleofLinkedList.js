@@ -39,6 +39,7 @@ var middleNode = function (head) {
 }
 
 // slightly faster
+// 52ms
 var middleNode = function (head) {
   let fast = slow = head;
 
