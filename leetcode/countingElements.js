@@ -28,18 +28,5 @@
 // O: integer
 // C: 1 <= arr.length <= 1000; 0 <= arr[i] <= 1000
 
-var groupAnagrams = function (strs) {
-  var map = {};
-
-  for (let str of strs) {
-    let chars = str.split('').sort().join('');
-
-    if (!map[chars]) {
-      map[chars] = [str];;
-    } else {
-      map[chars].push(str);
-    }
-  }
-
-  return Object.values(map);
+var countElements = function (arr) {
 }
