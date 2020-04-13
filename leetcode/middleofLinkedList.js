@@ -9,3 +9,8 @@
 // I: [1, 2, 3, 4, 5, 6]
 // O: Node 4 from this list (Serialization: [4, 5, 6])
 // Explanation: Since the list has two middle nodes with values 3 and 4, we return the second one
+
+// I: singly linked list
+// O: middle node
+// C:
+// E: the number of nodes in the given list will be between 1 and 100
