@@ -33,7 +33,8 @@ MinStack.prototype.push = function (x) {
 }
 
 MinStack.prototype.pop = function () {
-
+  this.storage.pop();
+  this.min.pop();
 }
 
 MinStack.prototype.top = function () {
