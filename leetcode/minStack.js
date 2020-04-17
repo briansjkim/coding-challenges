@@ -38,7 +38,9 @@ MinStack.prototype.pop = function () {
 }
 
 MinStack.prototype.top = function () {
-
+  if (this.storage.length) {
+    return this.storage[this.storage.length - 1];
+  }
 }
 
 MinStack.prototype.getMin = function () {
