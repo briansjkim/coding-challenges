@@ -12,5 +12,18 @@ function TreeNode(val) {
 }
 
 var diameterOfBinaryTree = function (root) {
+  let count = 0;
 
+  var traverse = function (node) {
+    if (!node) { return null; }
+
+    var left = traverse(node.left);
+    var right = traverse(node.right);
+
+    count = Math.max(count, left + right);
+    return Math.max(left, right) + 1;
+  }
+
+  traverse(root);
+  return count;
 }
