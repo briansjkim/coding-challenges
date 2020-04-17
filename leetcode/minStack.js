@@ -15,7 +15,25 @@
 // minStack.top(); // 0
 // minStack.getMin(); // -2
 
+var MinStack = function () {
 
+}
+
+MinStack.prototype.push = function (x) {
+
+}
+
+MinStack.prototype.pop = function () {
+
+}
+
+MinStack.prototype.top = function () {
+
+}
+
+MinStack.prototype.getMin = function () {
+
+}
 
 // var minStack = new MinStack();
 // minStack.push(-2);
