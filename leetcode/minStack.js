@@ -34,6 +34,7 @@ MinStack.prototype.push = function (x) {
 
 MinStack.prototype.pop = function () {
   this.storage.pop();
+  // also pop the last element from min since it's no longer in storage
   this.min.pop();
 }
 
