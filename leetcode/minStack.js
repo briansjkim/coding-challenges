@@ -21,6 +21,15 @@ var MinStack = function () {
 }
 
 MinStack.prototype.push = function (x) {
+  this.storage.push(x);
+
+  let min = this.getMin();
+
+  if (this.min.length) {
+    this.min.push(Math.min(x, min));
+  } else {
+    this.min.push(x);
+  }
 }
 
 MinStack.prototype.pop = function () {
