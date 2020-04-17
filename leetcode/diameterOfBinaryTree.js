@@ -12,12 +12,11 @@ function TreeNode(val) {
 }
 
 // 64ms
-// count increments BEFORE reaching the next node
 var diameterOfBinaryTree = function (root) {
   let count = 0;
 
   var traverse = function (node) {
-    if (!node) { return null; }
+    if (!node) { return 0; }
 
     var left = traverse(node.left);
     var right = traverse(node.right);
@@ -29,3 +28,14 @@ var diameterOfBinaryTree = function (root) {
   traverse(root);
   return count;
 }
+// node 1: count = 0. traverses left side first
+// node 2: count = 0. traverses left side first
+// node 4: count = 0 because left and right nodes are null; returns 1
+// node 2: count = 0 still because it needs to traverse right side
+// node 5: count = 0 because left and right nodes are null; returns 1
+// node 2: count = 2 because left and right nodes returned 1; returns 2 because the max between left and right is 1 then add 1
+// node 1: count = 0 still because it needs to traverse right side. left variable has the value of 2
+// node 3: count = 0 becaues left and right nodes are null; returns 1
+// node 1: left var = 2, right var = 1, count = Math.max(0, 2 + 1) = 3
+// node 1: returns the max between left and right which is 2, then plus 1
+// count = 3 from line 39
