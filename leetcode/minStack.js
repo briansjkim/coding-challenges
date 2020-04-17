@@ -16,11 +16,11 @@
 // minStack.getMin(); // -2
 
 var MinStack = function () {
-
+  this.storage = [];
+  this.min = [];
 }
 
 MinStack.prototype.push = function (x) {
-
 }
 
 MinStack.prototype.pop = function () {
