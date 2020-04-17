@@ -11,6 +11,7 @@ function TreeNode(val) {
   this.left = this.right = null;
 }
 
+// 64ms
 var diameterOfBinaryTree = function (root) {
   let count = 0;
 
