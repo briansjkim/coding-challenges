@@ -15,6 +15,8 @@
 // minStack.top(); // 0
 // minStack.getMin(); // -2
 
+
+// 96ms
 var MinStack = function () {
   this.storage = [];
   this.min = [];
