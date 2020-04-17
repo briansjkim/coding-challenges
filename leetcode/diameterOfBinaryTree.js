@@ -1,0 +1,2 @@
+// Given a binary tree, you need to compute the length of the diameter of the tree. The diameter of a binary tree is the length of the LONGEST path between any two nodes in a three.
+// This path may or may not pass through the root
