@@ -12,6 +12,7 @@ function TreeNode(val) {
 }
 
 // 64ms
+// count increments BEFORE reaching the next node
 var diameterOfBinaryTree = function (root) {
   let count = 0;
 
