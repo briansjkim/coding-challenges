@@ -24,3 +24,7 @@
 // O: integer
 // C:
 // E:
+
+var lastStoneWeight = function (stones) {
+
+}
