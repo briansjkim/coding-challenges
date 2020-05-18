@@ -8,5 +8,10 @@
  * Ex 2:
  * I: 1 -> 1 -> 2 -> 3 -> 3
  * O: 1 -> 2 -> 3
+ *
+ * i: LL with duplicates
+ * o: LL w/o duplicates
+ * c:
+ * e:
  */
 
