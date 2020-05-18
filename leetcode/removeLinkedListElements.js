@@ -17,5 +17,20 @@ function ListNode(val) {
 }
 
 var removeElements = function (head, val) {
+  if (!head) { return null; }
 
+  let p1 = head;
+  let p2 = head.next;
+
+  while (p2) {
+    if (p2.val === val) {
+      p1.next = p2.next;
+    } else {
+      p1 = p2;
+    }
+    p2 = p2.next;
+  }
+
+  if (head.val === val) { return head.next; }
+  return head;
 }
