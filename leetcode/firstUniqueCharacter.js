@@ -13,3 +13,7 @@
  * c: optimize
  * e:
  */
+
+var firstUniqChar = function (s) {
+
+}
