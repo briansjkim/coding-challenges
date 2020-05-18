@@ -17,5 +17,21 @@ function ListNode(val) {
 }
 
 var removeNthFromEnd = (head, n) => {
+  let dummyHead = new ListNode(-1);
+  dummyHead.next = head;
+  let p1 = dummyHead;
+  let p2 = dummyHead;
 
+  // the condition should be i <= n or i < n + 1 so that the first pointer will be one node behind the target node
+  for (let i = 0; i <= n; i++) {
+    p1 = p1.next;
+  }
+
+  while (p1 !== null) {
+    p1 = p1.next;
+    p2 = p2.next;
+  }
+
+  p2.next = p2.next.next;
+  return dummyHead.next;
 }
