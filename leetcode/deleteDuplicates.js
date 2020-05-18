@@ -1,14 +1,12 @@
 // given a sorted linked list, delete all duplicates such that each element appear only once
 
-var deleteDuplicates = (head) => {
-  var list = head;
+/**
+ * Ex 1:
+ * I: 1 -> 1 -> 2
+ * O: 1 -> 2
+ *
+ * Ex 2:
+ * I: 1 -> 1 -> 2 -> 3 -> 3
+ * O: 1 -> 2 -> 3
+ */
 
-  while (list) {
-    if (list.next !== null && list.val === list.next.val) {
-      list.next = list.next.next;
-    } else {
-      list = list.next;
-    }
-  }
-  return head;
-}
