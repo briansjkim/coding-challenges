@@ -11,7 +11,7 @@
  * i: string
  * o: index of first non-repeating char
  * c: optimize
- * e:
+ * e: you may assume the string contains only lowercase letters
  */
 
 var firstUniqChar = function (s) {
