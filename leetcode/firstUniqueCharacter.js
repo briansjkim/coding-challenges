@@ -7,4 +7,9 @@
  *
  * s = 'loveleetcode',
  * return 2
+ *
+ * i: string
+ * o: index of first non-repeating char
+ * c: optimize
+ * e:
  */
