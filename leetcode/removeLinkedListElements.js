@@ -10,3 +10,12 @@
  * c:
  * e:
  */
+
+function ListNode(val) {
+  this.val = val;
+  this.next = null;
+}
+
+var removeElements = function (head, val) {
+
+}
