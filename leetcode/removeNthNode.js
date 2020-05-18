@@ -6,6 +6,11 @@
 
 // Note: Given n will always be valid
 
+//i: LL and target node to remove
+//o: new LL with target node removed
+//c:
+//e: n will always be valid
+
 var removeNthFromEnd = (head, n) => {
 
 }
