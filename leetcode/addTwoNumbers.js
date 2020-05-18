@@ -17,13 +17,14 @@ function ListNode(val) {
 }
 
 var addTwoNumbers = (l1, l2) => {
-  var dummyHead = new ListNode(-1);
-  var head = dummyHead;
-  var sum = 0;
-  var carry = 0;
+  // create a new LL
+  let dummyHead = new ListNode(-1);
+  // set a pointer at the new LL's head
+  // this is what we'll be using to return at the end while the LL continues to grow
+  let newHead = dummyHead;
+  let sum = 0;
+  let carry = 0;
 
-  // keep running while at least one of these conditions are true
-  // because we still want to create a new list node if even only ONE condition passes true
   while (l1 !== null || l2 !== null || sum > 0) {
     if (l1 !== null) {
       sum += l1.val;
@@ -41,10 +42,10 @@ var addTwoNumbers = (l1, l2) => {
     }
 
     dummyHead.next = new ListNode(sum);
-    dummyHead = dummyHead.next;
+    dummyHead = dummyHead;
     sum = carry;
     carry = 0;
   }
 
-  return head.next;
+  return newHead.next;
 }
