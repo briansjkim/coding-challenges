@@ -21,5 +21,16 @@ function ListNode(val) {
 }
 
 var deleteDuplicates = function (head) {
+  // create a pointer so that we can iterate through and modify the given list
+  let list = head;
 
+  while (list) {
+    if (list.next && list.val === list.next.val) {
+      list.next = list.next.next;
+    } else {
+      list = list.next;
+    }
+  }
+
+  return head;
 }
