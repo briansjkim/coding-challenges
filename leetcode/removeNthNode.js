@@ -11,6 +11,11 @@
 //c:
 //e: n will always be valid
 
+function ListNode(val) {
+  this.val = val;
+  this.next = null;
+}
+
 var removeNthFromEnd = (head, n) => {
 
 }
