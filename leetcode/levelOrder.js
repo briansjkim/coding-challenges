@@ -10,3 +10,13 @@
  * c:
  * e:
  */
+
+function TreeNode(val) {
+  this.val = val;
+  this.left = null;
+  this.right = null;
+}
+
+var levelOrder = function (root) {
+
+}
