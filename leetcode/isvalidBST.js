@@ -19,3 +19,13 @@
  * c:
  * e:
  */
+
+function TreeNode(val) {
+  this.val = val;
+  this.left = null;
+  this.right = null;
+}
+
+var isValidBST = function (root) {
+
+}
