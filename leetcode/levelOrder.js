@@ -17,6 +17,28 @@ function TreeNode(val) {
   this.right = null;
 }
 
+// BFS
 var levelOrder = function (root) {
+  if (!root) { return []; }
+  let result = [];
+  let arr = [];
+  arr.push(root);
 
+  while (arr.length > 0) {
+    let inner = [];
+    // store the array's length in a separate variable in order to keep the ORIGINAL size of it because we are pushing new nodes inside the for loop
+    let size = arr.length;
+
+    for (let i = 0; i < size; i++) {
+      let node = queue.shift();
+      inner.push(node.val);
+
+      if (node.left) { arr.push(node.left); }
+      if (node.right) { arr.push(node.right); }
+    }
+
+    result.push(inner);
+  }
+
+  return result;
 }
