@@ -18,5 +18,27 @@
 // e:
 
 var isSymmetric = root => {
+  if (!root) { return true; }
 
+  return helper(root.left, root.right);
 };
+
+function helper(a, b) {
+  if (!a && !b) {
+    return true;
+  }
+
+  if (!a || !b) {
+    return false;
+  }
+
+  // only check if the two vals are different
+  // return false if they aren't
+  // if they are, continue to traverse
+  if (a.val !== b.val) {
+    return false;
+  }
+
+  return helper(a.left, b.right) && helper(a.right, b.left);
+}
+
