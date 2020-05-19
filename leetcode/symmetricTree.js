@@ -18,30 +18,5 @@
 // e:
 
 var isSymmetric = root => {
-  // if no input was passed in
-  if (!root) {
-    return true;
-  }
 
-  function isMirror(a, b) {
-    // if they're both null
-    if (!a && !b) {
-      return true;
-    }
-
-    // if only one of them is null
-    if (!a || !b) {
-      return false;
-    }
-
-    // if the values don't match
-    if (a.val !== b.val) {
-      return false;
-    }
-
-    // traverse the left side of a with the right side of b to check if they're mirrored
-    // then check the right side of a with the left side of b
-    return isMirror(a.left, b.right) && isMirror(a.right, b.left);
-  }
-  return isMirror(root.left, root.right);
 };
