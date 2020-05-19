@@ -27,5 +27,18 @@ function TreeNode(val) {
 }
 
 var isValidBST = function (root) {
+  return helper(root, null, null);
+}
 
+function helper(root, min, max) {
+  // if we hit the end of the path, that means the left/right side is valid
+  if (!root) { return true; }
+
+  // the condition in the left checks for the left side
+  // condition in the right checks for the right side
+  if ((max !== null && root.val >= max) || (min !== null && root.val <= min)) {
+    return false;
+  }
+
+  return helper(root.left, min, root.val) && helper(root.right, root.val, max);
 }
