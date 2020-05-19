@@ -42,3 +42,20 @@ function helper(root, min, max) {
 
   return helper(root.left, min, root.val) && helper(root.right, root.val, max);
 }
+
+// more readable helper function
+function helper(root, min, max) {
+  if (!root) { return true; }
+
+  // checks the left side because max is root.val
+  if (max !== null && root.val >= max) {
+    return false;
+  }
+
+  // checks right side because min is root.val
+  if (min !== null && root.val <= min) {
+    return false;
+  }
+
+  return helper(root.left, min, root.val) && helper(root.right, root.val, max);
+}
