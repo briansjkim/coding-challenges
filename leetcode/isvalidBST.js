@@ -13,4 +13,9 @@
  * Ex 2:
  * I: [5, 1, 4, null, null, 3, 6]
  * O: false
+ *
+ * i: binary tree
+ * o: boolean depending on whether the input tree is a BST or not
+ * c:
+ * e:
  */
