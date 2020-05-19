@@ -4,4 +4,9 @@
  * Ex:
  * I: [3, 9, 20, null, null, 15, 7]
  * O: [ [3], [9, 20], [15, 7] ]
+ *
+ * i: binary tree
+ * o: array of arrays
+ * c:
+ * e:
  */
