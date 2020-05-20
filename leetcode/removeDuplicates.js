@@ -9,10 +9,29 @@
  * Ex 2:
  * i: nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
  * o: 5 because nums should only contain 0, 1, 2, 3, 4
+ *
+ * i: sorted array of ints
+ * o: integer which represents the length of the array after only considering unique values
+ * c: O(1) space complexity
+ * e: modify the input array in-place
  */
 
+// using an object - O(N) space complexity
+var removeDuplicates = function (nums) {
+  let uniques = {};
+
+  for (let i = 0; i < nums.length; i++) {
+    if (!uniques[nums[i]]) {
+      uniques[nums[i]] = i;
+    }
+  }
+
+  return Object.keys(uniques).length;
+}
 
 
-// console.log(removeDuplicates([1, 1, 2]));
-// console.log(removeDuplicates([0,0,1,1,1,2,2,3,3,4]));
+
+
+console.log(removeDuplicates([1, 1, 2]));
+console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
 
