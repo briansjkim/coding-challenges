@@ -14,6 +14,11 @@
  * Ex 3:
  * i: [1, 1, 1, 3, 3, 4, 3, 2, 4, 2]
  * o: true
+ *
+ * i: array of integers (unsorted)
+ * o: boolean
+ * c:
+ * e:
  */
 
 var containsDuplicates = function (ints) {
