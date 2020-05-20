@@ -15,3 +15,7 @@
  * i: [1, 1, 1, 3, 3, 4, 3, 2, 4, 2]
  * o: true
  */
+
+var containsDuplicates = function (ints) {
+
+}
