@@ -22,3 +22,7 @@
 // ]
 
 // Don't assume the meetings are in order. The meeting times are coming from multiple teams
+
+function mergeRanges() {
+
+};
