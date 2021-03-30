@@ -25,3 +25,24 @@
     o: 2
     'RL', 'RRRLLRLL'
  */
+
+var balancedStringSplit = function(s) {
+    let count = 0;
+    let rCount = 0;
+    let lCount = 0;
+
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === 'R') {
+            rCount++;
+        } else {
+            lCount++;
+        };
+
+        if (rCount === lCount) {
+            count++;
+            rCount = 0;
+            lCount = 0;
+        };
+    };
+    return count;
+};
