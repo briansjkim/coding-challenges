@@ -43,4 +43,7 @@ var isMonotonic = function(A) {
     };
 
     return increase || decrease;
-}
+};
+
+// Runtime: 88ms, faster than 92.45%
+// Memory Usage: 45 MB, less than 72.88%
