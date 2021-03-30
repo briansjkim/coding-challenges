@@ -31,6 +31,10 @@ var balancedStringSplit = function(s) {
     let rCount = 0;
     let lCount = 0;
 
+    if (s.length === 1) {
+        return 'Not balanced';
+    };
+
     for (let i = 0; i < s.length; i++) {
         if (s[i] === 'R') {
             rCount++;
@@ -46,3 +50,5 @@ var balancedStringSplit = function(s) {
     };
     return count;
 };
+
+// runtime: 68ms, memory usage: 38.1MB
