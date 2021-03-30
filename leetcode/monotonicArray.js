@@ -25,3 +25,22 @@
  * i: [1, 1, 1]
  * o: true
  */
+
+var isMonotonic = function(A) {
+    let increase = true;
+    let decrease = true;
+
+    for (let i = 1; i < A.length; i++) {
+        // if A[i] is less than A[i - 1], that means it is not increasing and COULD be decreasing
+        if (A[i] < A[i - 1]) {
+            increase = false;
+        } else if (A[i] > A[i - 1]) {
+            // if A[i] is greater than A[i - 1], that means it is not decreasing and COULD be increasing
+            decrease = false;
+        } else {
+            continue;
+        };
+    };
+
+    return increase || decrease;
+}
