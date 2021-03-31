@@ -40,4 +40,6 @@ var findShortestSubArray = function(nums) {
     };
 
     return smallestLen;
-}
+};
+
+// runtime: 156ms, memory usage: 42.2 MB
