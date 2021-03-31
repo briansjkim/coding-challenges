@@ -66,3 +66,5 @@ var areAlmostEqual = function(s1, s2) {
 
     return count === 2 || count === 0;
 };
+
+// runtime: 96ms, memory usage: 40.8MB
