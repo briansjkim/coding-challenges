@@ -24,6 +24,49 @@
     Output: false
  */
 
+// optimized version
+var areAlmostEqual = function(s1, s2) {
+    if (s1.length !== s2.length) {
+        return false;
+    };
+
+    let count = 0;
+    
+    // checks if all the letters are the same between the two strings
+    // for (let letter of s1) {
+    //     if (!s2.includes(letter)) {
+    //         return false;
+    //     };
+    // };
+
+    // checks the number of the differences between the two strings
+    // for (let i = 0; i < s1.length; i++) {
+    //     if (s1[i] !== s2[i]) {
+    //         count++;
+    //     };
+    // };
+
+    // using these two for loops runs a bit slower, but it uses less memory
+    // runtime: 84ms, memory usage: 38.5MB
+    for (i; i < s1.length; i++) {
+        if (!s2.includes(s1[i])) {
+            return false;
+        };
+    };
+
+    for (i = 0; i < s1.length; i++) {
+        if (s1[i] !== s2[i]) {
+            count++;
+        };
+    };
+    // if count = 2, that means we can perform a string swap
+    // if count = 0, that means the two strings are already the same
+    // if count equals neither, that means we can't perform a string swap
+    return count === 2 || count === 0;
+};
+
+// runtime: 72ms, memory usage: 39.1MB
+
 var areAlmostEqual = function(s1, s2) {
     if (s1.length !== s2.length) {
         return false;
