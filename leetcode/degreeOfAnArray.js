@@ -19,3 +19,25 @@
     The degree is 3 because the element 2 is repeated 3 times.
     So [2,2,3,1,4,2] is the shortest subarray, therefore returning 6.
  */
+
+var findShortestSubArray = function(nums) {
+    let maxFreq = 0;
+    let freqPair = {};
+    let smallestLen = nums.length;
+
+    for (let i = 0; i < nums.length; i++) {
+        // set each key's value according to the number of times it occurs
+        freqPair[nums[i]] = (freqPair[nums[i]] || 0) + 1;
+        // adjust the max 
+        maxFreq = Math.max(maxFreq, freqPair[nums[i]]);
+    };
+
+    for (let key in freqPair) {
+        if (freqPair[key] === maxFreq) {
+            // the key is a string since it's a key in an object, so convert it to an integer 
+            smallestLen = Math.min(smallestLen, nums.lastIndexOf(Number(key)) - nums.indexOf(Number(key)) + 1);
+        };
+    };
+
+    return smallestLen;
+}
