@@ -52,3 +52,4 @@ var addTwoNumbers = function(l1, l2) {
 
   return newList.next;
 };
+// runtime: 136ms, memory usage: 44.2MB
