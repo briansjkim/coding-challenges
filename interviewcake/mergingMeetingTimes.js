@@ -23,8 +23,31 @@
 
 // Don't assume the meetings are in order. The meeting times are coming from multiple teams
 
-function mergeRanges() {
+function mergeRanges(meetings) {
+  const sortedMeetings = meetings.sort(function(a, b) {
+    return a.startTime - b.startTime;
+  });
 
+  // add the first sortedMeeting since it'll always be the first meeting
+  let mergedMeetings = [sortedMeetings[0]];
+
+  // iterate through the sortedMeetings but start i at 1 since we already added the first meeting
+  for (let i = 1; i < sortedMeetings.length; i++) {
+    // since we need to compare the times between each meeting, create two variables storing the last merged meeting and the current meeting
+    let currentMeeting = sortedMeetings[i];
+    let lastMergedMeeting = mergedMeetings[mergedMeetings.length - 1];
+    
+    // check if the lastMergedMeeting's endtime is greater than or equal to the next meeting's startTime
+    // we do this bc we want to see if the meetings need to be merged or separated
+    if (lastMergedMeeting.endTime >= currentMeeting.startTime) {
+      // if it's true, we want the meeting's endTime to be the latest one
+      lastMergedMeeting.endTime = Math.max(lastMergedMeeting.endTime, currentMeeting.endTime);
+    } else {
+      mergedMeetings.push(currentMeeting);
+    };
+  };
+
+  return mergedMeetings;
 };
 
 // meetings overlap
