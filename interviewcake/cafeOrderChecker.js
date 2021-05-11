@@ -28,3 +28,7 @@ Would be first-come, first-served.
 
 Note: Order numbers are arbitrary. They do not have to be in increasing order.
  */
+
+function isFirstComeFirstServed(takeOutOrders, dineInOrders, servedOrders) {
+
+};
