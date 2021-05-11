@@ -30,5 +30,28 @@ Note: Order numbers are arbitrary. They do not have to be in increasing order.
  */
 
 function isFirstComeFirstServed(takeOutOrders, dineInOrders, servedOrders) {
+    // these two idxs will help us iterate through both of the orders
+    let takeOutIdx = 0;
+    let dineInIdx = 0;
 
+    for (let i = 0; i < servedOrders.length; i++) {
+        // if the current order num from servedOrders is from takeOutOrders
+            // we increment the idx so that we can check if it's first come first served
+        if (servedOrders[i] === takeOutOrders[takeOutIdx]) {
+            takeOutIdx++;
+        } else if (servedOrders[i] === dineInOrders[dineInIdx]) {
+            // same as with takeOutOrders
+            dineInIdx++;
+        } else {
+            // if the current order num from servedOrders doesn't match the current order num from either takeOutOrders or dineInOrders
+            return false;
+        };
+    };
+
+    // in the case that takeOutOrders and dineInOrders still have order nums that aren't in servedOrders, we want to return false since it's not first come first served
+    if (takeOutIdx !== takeOutOrders.length || dineInIdx !== dineInOrders.length) {
+        return false;
+    };
+
+    return true;
 };
