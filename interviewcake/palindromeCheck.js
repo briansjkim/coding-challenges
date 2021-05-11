@@ -9,3 +9,7 @@
  * Ignore whitespace
  * Ignore symbols
  */
+
+function palindromeCheck(str) {
+
+};
