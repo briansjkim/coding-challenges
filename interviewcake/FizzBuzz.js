@@ -6,3 +6,6 @@
  * For multiples of 4, print 'Foo'. For multiples of 8, print 'Bar'
  */
 
+function FizzBuzz() {
+
+};
