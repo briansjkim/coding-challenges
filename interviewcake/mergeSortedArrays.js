@@ -11,6 +11,34 @@
  */
 
 function mergeArrays(myArray, alicesArray) {
+    let mergedArray = [];
+    // using these two as indices to iterate through both arrays
+    let i = 0;
+    let j = 0;
 
+    while (i < myArray.length && j < alicesArray.length) {
+        if (myArray[i] < alicesArray[j]) {
+            mergedArray.push(myArray[i]);
+            i++;
+        } else {
+            // if alicesArray has a num that is less than or EQUAL to a num in myArray
+            // add it to the mergedArray
+            mergedArray.push(alicesArray[j]);
+            j++;
+        };
+    };
+
+    // here, we want to make sure all nums from each array has been added to mergedArray
+    while (i < myArray.length) {
+        mergedArray.push(myArray[i]);
+        i++;
+    };
+
+    while (j < alicesArray.length) {
+        mergedArray.push(alicesArray[j]);
+        j++;
+    };
+
+    return mergedArray;
 };
 
