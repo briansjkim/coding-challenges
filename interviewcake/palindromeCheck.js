@@ -11,5 +11,20 @@
  */
 
 function palindromeCheck(str) {
+    let newStr = '';
+    let i = 0;
+    let j = newStr.length - 1;
 
+    for (i; i < str.length; i++) {
+        newStr += str[i].toLowerCase();
+    };
+
+    i = 0;
+    while (i < j) {
+        if (newStr[j] !== str[i]) {
+            return false;
+        };
+    };
+
+    return true;
 };
