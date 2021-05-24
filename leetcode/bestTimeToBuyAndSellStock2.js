@@ -38,15 +38,14 @@
 // add the difference to the max
 // return 'max'
 
-// 56ms
-var maxProfit = function (prices) {
-  var profit = 0;
+var maxProfit = function(prices) {
+  let profit = 0;
 
-  for (var i = 0; i < prices.length; i++) {
+  for (let i = 0; i < prices.length; i++) {
     if (prices[i + 1] > prices[i]) {
       profit += prices[i + 1] - prices[i];
-    }
-  }
+    };
+  };
 
   return profit;
 }
