@@ -16,34 +16,11 @@
  * e: modify the input array in-place
  */
 
-// using an object - O(N) space complexity
-var removeDuplicates = function (nums) {
-  let uniques = {};
+// re-doing problem and removing duplicates IN-PLACE
+var removeDuplicates = function(nums) {
 
-  for (let i = 0; i < nums.length; i++) {
-    if (!uniques[nums[i]]) {
-      uniques[nums[i]] = i;
-    }
-  }
-
-  return Object.keys(uniques).length;
 }
 
-var removeDuplicates = function (nums) {
-  let i = 0;
-  let j = 1;
-
-  while (i < nums.length && j < nums.length) {
-    if (nums[i] === nums[j]) {
-      nums.splice(j, 1);
-    } else {
-      i++;
-      j++;
-    }
-  }
-
-  return nums.length;
-}
 
 
 console.log(removeDuplicates([1, 1, 2]));
