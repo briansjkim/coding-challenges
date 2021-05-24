@@ -18,15 +18,22 @@
 
 // re-doing problem and removing duplicates IN-PLACE
 var removeDuplicates = function(nums) {
+  // newLen will act as a pointer to 'create' the unique sorted array within the input array
   let newLen = 0;
-  
+
+  // start iterating at idx 1 since newLen is going to point to idx 0
   for (let i = 1; i < nums.length; i++) {
-      if (nums[newLen] !== nums[i]) {
-          newLen += 1;
-          nums[newLen] = nums[i];
-      };
+    if (nums[i] !== nums[newLen]) {
+      // we want to increment newLen pointer first before swapping the values between newLen idx and idx i
+      // this is so that we can 'create' the unique array with no duplicates within the input array
+      newLen += 1;
+      nums[newLen] = nums[i];
+    };
   };
-  
+
+  // remember that newLen represents the length of the new array as an INDEX
+  // since we started newLen at 0, this means that newLen represents the length - 1 of the new unique array
+  // which is why we want to increment newLen before returning it
   return newLen += 1;
 };
 
