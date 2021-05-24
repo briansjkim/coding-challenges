@@ -18,8 +18,17 @@
 
 // re-doing problem and removing duplicates IN-PLACE
 var removeDuplicates = function(nums) {
-
-}
+  let newLen = 0;
+  
+  for (let i = 1; i < nums.length; i++) {
+      if (nums[newLen] !== nums[i]) {
+          newLen += 1;
+          nums[newLen] = nums[i];
+      };
+  };
+  
+  return newLen += 1;
+};
 
 
 
