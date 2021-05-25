@@ -1,21 +1,21 @@
-var plusOne = (digits) => {
-  // start at the end because the last element COULD be the only digit that we change
-  for (let i = digits.length - 1; i >= 0; i--) {
-    // we pre-increment the digit because regardless of whether it is greater than or equal to 10, we have to increment the last digit
-    // Ex: [1, 2, 3] -> 3 is already incremented BEFORE the condition is checked
+/*
+Given a non-empty array of decimal digits representing a non-negative integer, increment one to the integer.
 
-    // if the last digit was 9, then it becomes 10 and i moves left to the next element
-    // THEN it pre-increments and then checks if it's greater than or equal to 10
+The digits are stored such that the most significant digit is at the head of the list, and each element in the array contains a single digit.
 
-    digits[i] += 1;
-    if (digits[i] >= 10) {
-      digits[i] = 0;
-    } else {
-      return digits;
-    }
-  }
+You may assume the integer does not contain any leading zero, except the number 0 itself.
 
-  // if all of the digits were 9 or 0, then we want to add 1 to the beginning
-  digits.unshift(1);
-  return digits;
-}
+Ex 1: 
+Input: digits = [1,2,3]
+Output: [1,2,4]
+Explanation: The array represents the integer 123.
+
+Ex2:
+Input: digits = [4,3,2,1]
+Output: [4,3,2,2]
+Explanation: The array represents the integer 4321.
+
+Ex 3:
+Input: digits = [0]
+Output: [1]
+*/
