@@ -20,3 +20,17 @@
  * c:
  * e:
  */
+
+var containsDuplicates = function(nums) {
+  let uniques = {};
+
+  for (let i = 0; i < nums.length; i++) {
+    if (!uniques[nums[i]]) {
+      uniques[nums[i]] = 1;
+    } else {
+      return true;
+    };
+  };
+
+  return false;
+};
