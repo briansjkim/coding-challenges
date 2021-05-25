@@ -20,6 +20,8 @@ Input: digits = [0]
 Output: [1]
 */
 
+// 84ms and 38.9 MB of memory
+
 var plusOne = function(digits) {
   // start the iteration from the end since we want to just add 1 to the last digit (EXCLUDING ANY EDGE CASES)
   for (let i = digits.length - 1; i >= 0; i--) {
