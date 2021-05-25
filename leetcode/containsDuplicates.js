@@ -20,17 +20,3 @@
  * c:
  * e:
  */
-
-var containsDuplicates = function (ints) {
-  let uniques = {};
-
-  for (let i = 0; i < ints.length; i++) {
-    if (!uniques[ints[i]]) {
-      uniques[ints[i]] = 1;
-    } else {
-      return true;
-    }
-  }
-
-  return false;
-}
