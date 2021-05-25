@@ -21,7 +21,9 @@
  * e:
  */
 
-var containsDuplicates = function(nums) {
+// 96ms and 46.6 MB of memory
+
+var containsDuplicate = function(nums) {
   let uniques = {};
 
   for (let i = 0; i < nums.length; i++) {
