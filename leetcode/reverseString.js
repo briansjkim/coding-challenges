@@ -16,3 +16,6 @@ s[i] is a printable ascii character.
 
 */
 
+var reverseString = function(s) {
+
+};
