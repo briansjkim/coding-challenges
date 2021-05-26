@@ -17,5 +17,16 @@ s[i] is a printable ascii character.
 */
 
 var reverseString = function(s) {
+    // do a simple two pointer approach
+    let i = 0;
+    let j = s.length - 1;
 
+    while (i < j) {
+        let temp = s[i];
+        s[i] = s[j];
+        s[j] = temp;
+
+        i++;
+        j--;
+    };
 };
