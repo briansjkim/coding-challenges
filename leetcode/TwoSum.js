@@ -32,5 +32,14 @@ Follow-up: Can you come up with an algorithm that is less than O(n2) time comple
  */
 
 var twoSum = function(nums, target) {
-
+    for (let i = 0; i < nums.length; i++) {
+        // we want to set j to i + 1 so that whenever j reaches the end of the array and i is incremented
+        // j always starts at i + 1
+        for (let j = i + 1; j < nums.length; j++) {
+            // if nums[i] + nums[j] don't equal the target, continue iterating
+            if (nums[i] + nums[j] === target) {
+                return [i, j];
+            };
+        };
+    };
 };
