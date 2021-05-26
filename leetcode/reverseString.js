@@ -16,6 +16,7 @@ s[i] is a printable ascii character.
 
 */
 
+// 104ms and 45.9MB memory
 var reverseString = function(s) {
     // do a simple two pointer approach
     let i = 0;
