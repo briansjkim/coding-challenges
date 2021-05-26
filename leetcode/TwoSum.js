@@ -1,31 +1,23 @@
-// Given an array of integers, return indices of the two numbers such that they add up to a specific target
-// You may assume that each input would have EXACTLY one solution, and you may not use the same element twice
+/**
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
-// Example 1:
-// i: nums = [2, 7, 11, 15], target = 9
-// o: [0, 1] because nums[0] + nums[1] = target
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
-// quadratic
-function twoSum(nums, target) {
-  for (var i = 0; i < nums.length; i++) {
-    for (var j = i + 1; j < nums.length; j++) {
-      if (nums[i] + nums[j] === target) {
-        return [i, j];
-      }
-    }
-  }
-}
+You can return the answer in any order.
 
-// linear
-function twoSum(nums, target) {
-  var storage = {};
+Example 1:
 
-  for (var i = 0; i < nums.length; i++) {
-    let diff = target - nums[i];
-    if (storage.hasOwnProperty(diff)) {
-      return [storage[diff], i];
-    }
-    storage[nums[i]] = i;
-  }
-}
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Output: Because nums[0] + nums[1] == 9, we return [0, 1].
 
+Example 2:
+
+Input: nums = [3,2,4], target = 6
+Output: [1,2]
+
+Example 3:
+
+Input: nums = [3,3], target = 6
+Output: [0,1]
+ */
