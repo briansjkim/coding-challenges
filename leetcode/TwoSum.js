@@ -44,3 +44,24 @@ var twoSum = function(nums, target) {
         };
     };
 };
+
+var twoSum = function(nums, target) {
+    // create an obj to store the difference between target and each of the nums
+    let storage = {};
+
+    for (let i = 0; i < nums.length; i++) {
+        let diff = target - nums[i];
+        // if the difference is in the obj
+        if (storage.hasOwnProperty(diff)) {
+            // then we can leave the iteration and return the correct output
+            return [storage[diff], i];
+        } else {
+            // but if the diff isn't in the obj
+            // then we want to add the current integer into the obj and assign its value as its idx
+
+            // we want to store the current integer because we are finding the difference between the target num and the current num in the beginning
+            // and it wouldn't work if we stored the difference
+            storage[nums[i]] = i;
+        };
+    };
+};
