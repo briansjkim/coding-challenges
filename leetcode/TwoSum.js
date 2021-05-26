@@ -31,6 +31,7 @@ Only one valid answer exists.
 Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
  */
 
+// 112 ms, 39.3 MB memory
 var twoSum = function(nums, target) {
     for (let i = 0; i < nums.length; i++) {
         // we want to set j to i + 1 so that whenever j reaches the end of the array and i is incremented
