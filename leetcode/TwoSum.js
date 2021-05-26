@@ -45,6 +45,7 @@ var twoSum = function(nums, target) {
     };
 };
 
+// 76ms and 38.9 MB memory 
 var twoSum = function(nums, target) {
     // create an obj to store the difference between target and each of the nums
     let storage = {};
