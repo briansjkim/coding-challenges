@@ -18,6 +18,7 @@ Constraints:
 s consists of only lowercase English letters.
 */
 
+// 140ms, 41.9MB
 var firstUniqChar = function(s) {
     for (let i = 0; i < s.length; i++) {
         // this if statement will help us find all of the duplicates
