@@ -19,5 +19,15 @@ s consists of only lowercase English letters.
 */
 
 var firstUniqChar = function(s) {
+    for (let i = 0; i < s.length; i++) {
+        // this if statement will help us find all of the duplicates
+        // if the idxs are the same, that means the current char is a unique int
+            // when this happens, we return the idx of the current char
+        if ( s.indexOf(s[i]) === s.lastIndexOf(s[i]) ) {
+            return i;
+        };
+    };
 
+    // if none of the characters were unique, return -1
+    return -1;
 };
