@@ -18,6 +18,7 @@
 // switch the number at the current index to 0
 // increment idx
 
+// 80ms, 40.4 MB
 var moveZeroes = function(nums) {
   // will act as our slow pointer
   let j = 0;
