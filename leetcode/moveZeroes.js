@@ -19,5 +19,25 @@
 // increment idx
 
 var moveZeroes = function(nums) {
+  // will act as our slow pointer
+  let j = 0;
 
+  for (let i = 0; i < nums.length; i++) {
+    // if the current int isn't zero
+    if (nums[i] !== 0) {
+      // we want to give the int at the slow pointer the current int's value
+      nums[j] = nums[i];
+
+      // then we want to check if the two idxs are the same
+        // this way we can check for two things
+        // if i === j, that means the array has only one non zero item
+        // and when the slow pointer (j) catches up to the fast pointer (i)
+          // this means that there are no zeroes that i has seen
+      if (i !== j) {
+        nums[i] = 0;
+      };
+
+      j++;
+    };
+  };
 };
