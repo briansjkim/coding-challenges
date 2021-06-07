@@ -49,3 +49,7 @@ var isAnagram = function(s, t) {
     
     return true;
 };
+
+var isAnagram = function(s, t) {
+
+};
