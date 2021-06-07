@@ -44,6 +44,7 @@ var reverse = function(x) {
   };
 };
 
+// 92ms 39.8MB
 var reverse = function(x) {
   let reversedNum = Math.abs(x).toString().split('').reverse().join('');
 
