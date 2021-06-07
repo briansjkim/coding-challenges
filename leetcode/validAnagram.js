@@ -14,6 +14,7 @@ Constraints:
 s and t consist of lowercase English letters.
 */
 
+// 160ms 41.1 MB memory
 var isAnagram = function(s, t) {
     let sObj = {};
     let tObj = {};
