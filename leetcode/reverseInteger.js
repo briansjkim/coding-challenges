@@ -24,6 +24,7 @@ Constraints:
 -231 <= x <= 231 - 1
 */
 
+// 100ms 40.2MB
 var reverse = function(x) {
   let numStr = Math.abs(x).toString();
   let numArr = numStr.split('');
