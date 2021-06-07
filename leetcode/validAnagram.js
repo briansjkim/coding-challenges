@@ -15,5 +15,36 @@ s and t consist of lowercase English letters.
 */
 
 var isAnagram = function(s, t) {
-
+    let sObj = {};
+    let tObj = {};
+    
+    for (let i = 0; i < s.length; i++) {
+        if (!sObj[s[i]]) {
+            sObj[s[i]] = 1;
+        } else {
+            sObj[s[i]]++;
+        };
+    };
+    
+    for (let j = 0; j < t.length; j++) {
+        if (!tObj[t[j]]) {
+            tObj[t[j]] = 1;
+        } else {
+            tObj[t[j]]++;
+        };
+    };
+    
+    for (let sKey in sObj) {
+        if (!tObj[sKey] || sObj[sKey] !== tObj[sKey]) {
+            return false;
+        };
+    };
+    
+    for (let tKey in tObj) {
+        if (!sObj[tKey] || tObj[tKey] !== sObj[tKey]) {
+            return false;
+        };
+    };
+    
+    return true;
 };
