@@ -51,5 +51,23 @@ var isAnagram = function(s, t) {
 };
 
 var isAnagram = function(s, t) {
+    let storage = {};
 
+    for (let i = 0; i < s.length; i++) {
+        if (!storage[s[i]]) {
+            storage[s[i]] = 1;
+        } else {
+            storage[s[i]]++;
+        };
+    };
+
+    for (let j = 0; j < t.length; j++) {
+        if (!storage[t[j]]) {
+            storage[t[j]]--;
+        } else {
+            return false;
+        };
+    };
+
+    return true;
 };
