@@ -43,3 +43,13 @@ var reverse = function(x) {
     return result * Math.sign(x);
   };
 };
+
+var reverse = function(x) {
+  let reversedNum = Math.abs(x).toString().split('').reverse().join('');
+
+  if (reversedNum > 2**31) {
+    return 0;
+  } else {
+    return reversedNum * Math.sign(x);
+  };
+};
