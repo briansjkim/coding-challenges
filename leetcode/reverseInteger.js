@@ -25,5 +25,20 @@ Constraints:
 */
 
 var reverse = function(x) {
+  let numStr = Math.abs(x).toString();
+  let numArr = numStr.split('');
 
+  let result = '';
+
+  for (let i = numArr.length - 1; i >= 0; i--) {
+    result += numArr[i];
+  };
+
+  result = Number(result);
+
+  if (result > 2**31) {
+    return 0;
+  } else {
+    return result * Math.sign(x);
+  };
 };
