@@ -50,6 +50,7 @@ var isAnagram = function(s, t) {
     return true;
 };
 
+// 104ms 40.5MB memory
 var isAnagram = function(s, t) {
     let storage = {};
 
